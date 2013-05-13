@@ -15,7 +15,7 @@ html, body {
 }
 
 
-.leaflet-control-zoom-fullscreen { background-image: url(icon-fullscreen.png); }
+.leaflet-control-zoom-fullscreen { background-image: url(<%= asset_path 'icon-fullscreen.png' %>); }
 
 .scrollup{
     width:40px;
@@ -26,7 +26,7 @@ html, body {
     right:30px;
     display:none;
     text-indent:-9999px;
-    background: url(icon_top.png) no-repeat;
+    background: url(<%= asset_path 'icon_top.png' %>) no-repeat;
 }
 
 .awesome-marker-shadow {
