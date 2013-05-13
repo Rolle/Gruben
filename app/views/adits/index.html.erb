@@ -1,0 +1,49 @@
+<div class="well well-small">
+  <%= link_to 'Neu', new_adit_path, :class => "btn btn-primary" %>
+</div>
+
+<% if flash[:notice] %>
+  <div class="alert alert-success">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>Info</strong> <%= flash[:notice] %>
+  </div>
+<% end %>
+<% if flash[:error] %>
+    <div class="alert">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>Info</strong> <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<table class="table table-bordered table-striped" id="user_table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Beschreibung</th>
+        <th>Besitzer</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+		<% @adits.each do |adit| %>
+      <% if adit.image_artifacts.size() > 0 %>
+			   <tr class="success">
+      <% else %>
+        <tr class="warning">
+      <% end %>
+				<td><%= adit.name %></td>
+				<td><%= raw adit.description %></td>
+				<td><%= adit.owner %></td>
+  				<td><%= link_to 'Bearbeiten', edit_adit_path(adit), :class => "btn btn-primary btn-small" %></td>
+  				<td><%= link_to 'Löschen', adit, :confirm => 'Wirklich wirklich löschen?', :method => :delete, :class => "btn btn-primary btn-small" %></td>
+          <td>
+            <% if adit.image_artifacts.size() > 0 %>
+              <%= link_to 'Karte', adit_map_path(adit), :class => "btn btn-primary btn-small" %>
+            <% end %>
+          </td>
+    		</tr>
+    	<% end %>
+  	</tbody>
+</table>

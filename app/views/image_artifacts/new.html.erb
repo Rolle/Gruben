@@ -1,0 +1,41 @@
+<%= tinymce_assets %>
+<div class="well">
+	<% if flash[:notice] %>
+		<div class="alert alert-success">
+  			<button type="button" class="close" data-dismiss="alert">&times;</button>
+  			<strong>Info</strong> <%= flash[:notice] %>
+		</div>
+    <% end %>
+    <% if flash[:error] %>
+    		<div class="alert">
+  			<button type="button" class="close" data-dismiss="alert">&times;</button>
+  			<strong>Info</strong> <%= flash[:notice] %>
+		</div>
+    <% end %>
+    <h4>Neue Grube / neuer Stollen:</h4>
+	<%= form_for(@image_artifact) do |f| %>
+	  	<div class="control-group">
+	    	<%= f.label "Grube:", :class => "control-label" %>
+	    	<div class="controls">
+	      		<%= f.select :adit_id, options_from_collection_for_select(@adits, "id", "name"), :class => "input-xlarge" %>
+	    	</div>
+	  	</div>
+	  	<div class="control-group">
+	    	<%= f.label "Beschreibung:", :class => "control-label" %>
+	    	<div class="controls">
+	      		<!--%= f.cktext_area :description, :toolbar => "Basic" %-->
+	      		<%= text_area_tag :description, "", :class => "tinymce", :rows => 40, :cols => 70 %>
+	    	</div>
+	  	</div>
+	  	<div class="control-group">
+	    	<%= f.label "Bilddatei:", :class => "control-label" %>
+	    	<div class="controls">
+	      		<%= f.file_field :image, :class => "input-xlarge" %>
+	    	</div>
+	  	</div>
+		<%= f.hidden_field :imgtype, { :value => 0 } %>
+		<div class="actions">
+	    	<%= f.submit "Speichern", :class=>"btn btn-primary" %>
+	  	</div>					  	
+	<% end %>
+</div><%= tinymce %>

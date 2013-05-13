@@ -1,0 +1,42 @@
+<div class="well">
+	<% if flash[:notice] %>
+		<div class="alert alert-success">
+  			<button type="button" class="close" data-dismiss="alert">&times;</button>
+  			<strong>Info</strong> <%= flash[:notice] %>
+		</div>
+    <% end %>
+    <% if flash[:error] %>
+    		<div class="alert">
+  			<button type="button" class="close" data-dismiss="alert">&times;</button>
+  			<strong>Info</strong> <%= flash[:notice] %>
+		</div>
+    <% end %>
+    
+	<%= form_for(@adit) do |f| %>
+	  	<div class="control-group">
+	    	<%= f.label "Name der Grube:", :class => "control-label" %>
+	    	<div class="controls">
+	      		<%= f.text_field :name, :class => "input-xlarge" %>
+	    	</div>
+	  	</div>
+
+	  	<div class="control-group">
+	    	<%= f.label "Beschreibung:", :class => "control-label" %>
+	    	<div class="controls">
+	      		<%= f.cktext_area :description, :toolbar => 'Basic' %>
+	    	</div>
+	  	</div>
+
+	  	<div class="control-group">
+	    	<%= f.label "Besitzer:", :class => "control-label" %>
+	    	<div class="controls">
+	      		<%= f.text_field :owner, :class => "input-xlarge" %>
+	    	</div>
+	  	</div>
+
+		<div class="actions">
+	    	<%= f.submit "Speichern", :class=>"btn btn-primary" %>
+	  	</div>
+	  	
+	<% end %>
+</div>
