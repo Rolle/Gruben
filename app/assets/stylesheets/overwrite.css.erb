@@ -1,0 +1,83 @@
+#map {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    display: block;
+}
+
+html, body {
+    height: 100%;
+}
+
+.fill { 
+    min-height: 100%;
+    height: 100%;
+}
+
+
+.leaflet-control-zoom-fullscreen { background-image: url(icon-fullscreen.png); }
+
+.scrollup{
+    width:40px;
+    height:40px;
+    opacity:0.3;
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    display:none;
+    text-indent:-9999px;
+    background: url(icon_top.png) no-repeat;
+}
+
+.awesome-marker-shadow {
+  background: url(<%= asset_path 'markers-shadow.png'%>) no-repeat 0 0;
+}
+
+.awesome-marker {
+  background: url(<%= asset_path 'markers-soft.png'%>) no-repeat 0 0;
+  }
+
+  @media (min--moz-device-pixel-ratio: 1.5),(-o-min-device-pixel-ratio: 3/2),
+(-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx) {
+ .awesome-marker {
+  background-image: url(<%= asset_path 'markers-soft@2x.png' %>);
+ }
+ .awesome-marker-shadow {
+  background-image: url(<%= asset_path 'markers-shadow@2x.png' %>);
+ }
+}
+.leaflet-control-layers-toggle {
+    background-image: url(<%= asset_path 'layers.png' %>);
+}
+
+.leaflet-draw-toolbar a {
+    background-image: url(<%= asset_path 'spritesheet.png'%>);
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  background-image: url(<%= asset_path 'glyphicons-halflings.png' %>);
+}
+
+.icon-white,
+.nav-pills > .active > a > [class^="icon-"],
+.nav-pills > .active > a > [class*=" icon-"],
+.nav-list > .active > a > [class^="icon-"],
+.nav-list > .active > a > [class*=" icon-"],
+.navbar-inverse .nav > .active > a > [class^="icon-"],
+.navbar-inverse .nav > .active > a > [class*=" icon-"],
+.dropdown-menu > li > a:hover > [class^="icon-"],
+.dropdown-menu > li > a:focus > [class^="icon-"],
+.dropdown-menu > li > a:hover > [class*=" icon-"],
+.dropdown-menu > li > a:focus > [class*=" icon-"],
+.dropdown-menu > .active > a > [class^="icon-"],
+.dropdown-menu > .active > a > [class*=" icon-"],
+.dropdown-submenu:hover > a > [class^="icon-"],
+.dropdown-submenu:focus > a > [class^="icon-"],
+.dropdown-submenu:hover > a > [class*=" icon-"],
+.dropdown-submenu:focus > a > [class*=" icon-"] {
+  background-image: url(<%= asset_path 'glyphicons-halflings.png' %>);
+}
+
+.bs-docs-sidenav .active a:hover .icon-chevron-right {
+  background-image: url(<%= asset_path 'glyphicons-halflings-white.png' %>);
+}

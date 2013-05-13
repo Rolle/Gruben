@@ -1,3 +1,4 @@
+<%= tinymce_assets %>
 <div class="well">
 	<% if flash[:notice] %>
 		<div class="alert alert-success">
@@ -23,7 +24,7 @@
 	  	<div class="control-group">
 	    	<%= f.label "Beschreibung:", :class => "control-label" %>
 	    	<div class="controls">
-	      		<%= f.cktext_area :description, :toolbar => 'Basic' %>
+	      		<%= text_area_tag :description, "", :class => "tinymce", :rows => 40, :cols => 70 %>
 	    	</div>
 	  	</div>
 
@@ -40,3 +41,4 @@
 	  	
 	<% end %>
 </div>
+<%= tinymce %>
