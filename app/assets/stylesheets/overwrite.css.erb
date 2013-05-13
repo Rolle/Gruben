@@ -26,33 +26,9 @@ html, body {
     right:30px;
     display:none;
     text-indent:-9999px;
-    background: url(<%= asset_path 'icon_top.png' %>) no-repeat;
+    background: url(<%= asset_path 'icon_top.png' %>);
 }
 
-.awesome-marker-shadow {
-  background: url(<%= asset_path 'markers-shadow.png'%>) no-repeat 0 0;
-}
-
-.awesome-marker {
-  background: url(<%= asset_path 'markers-soft.png'%>) no-repeat 0 0;
-  }
-
-  @media (min--moz-device-pixel-ratio: 1.5),(-o-min-device-pixel-ratio: 3/2),
-(-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx) {
- .awesome-marker {
-  background-image: url(<%= asset_path 'markers-soft@2x.png' %>);
- }
- .awesome-marker-shadow {
-  background-image: url(<%= asset_path 'markers-shadow@2x.png' %>);
- }
-}
-.leaflet-control-layers-toggle {
-    background-image: url(<%= asset_path 'layers.png' %>);
-}
-
-.leaflet-draw-toolbar a {
-    background-image: url(<%= asset_path 'spritesheet.png'%>);
-}
 [class^="icon-"],
 [class*=" icon-"] {
   background-image: url(<%= asset_path 'glyphicons-halflings.png' %>);
@@ -78,6 +54,11 @@ html, body {
   background-image: url(<%= asset_path 'glyphicons-halflings.png' %>);
 }
 
-.bs-docs-sidenav .active a:hover .icon-chevron-right {
-  background-image: url(<%= asset_path 'glyphicons-halflings-white.png' %>);
-}
+.leaflet-control-zoom-in {
+  background-image: url(<%= asset_path 'zoom-in.png' %>);
+  }
+.leaflet-control-zoom-out {
+  background-image: url(<%= asset_path 'zoom-out.png' %>);
+  }
+.leaflet-control-layers a {
+  background-image: url(<%= asset_path 'layers.png' %>);
