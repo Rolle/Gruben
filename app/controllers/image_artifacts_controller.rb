@@ -35,7 +35,7 @@ class ImageArtifactsController < ApplicationController
 
   def create
   	@page_id = "image_"
-  	@image_artifact = ImageArtifact.new(params[:image_artifact])
+  	@image_artifact = ImageArtifact.new(image_artifact_params)
   	@image_artifact.save!
     flash[:notice] = "Bild wurde hochgeladen und gespeichert!"
   	redirect_to :action => :new
