@@ -316,6 +316,8 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/ruby/Gruben/Gemfile",
+		"/C/Projects/ruby/Gruben/app/controllers/image_artifacts_controller.rb",
 		"/C/Projects/ruby/BergwerkPage/source/map.html.erb",
 		"/C/Projects/ruby/BergwerkPage/source/javascripts/map.js",
 		"/C/Projects/ruby/BergwerkPage/source/javascripts/Google.js",
@@ -441,9 +443,7 @@
 		"/C/Projects/ruby/BigSwiftBrother/app/views/statistic/session.html.erb",
 		"/C/Projects/ruby/BigSwiftBrother/app/controllers/statistic_controller.rb",
 		"/C/Projects/ruby/BigSwiftBrother/app/views/statistic/params_session.html.erb",
-		"/C/Projects/ruby/BigSwiftBrother/app/models/statistic.rb",
-		"/C/Projects/ruby/BigSwiftBrother/app/helpers/statistic_helper.rb",
-		"/C/Projects/ruby/BigSwiftBrother/app/helpers/application_helper.rb"
+		"/C/Projects/ruby/BigSwiftBrother/app/models/statistic.rb"
 	],
 	"find":
 	{
@@ -674,6 +674,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 281.0,
+	"side_bar_width": 372.0,
 	"status_bar_visible": true
 }
