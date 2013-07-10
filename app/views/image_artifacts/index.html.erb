@@ -8,7 +8,7 @@
 
 <ul class="thumbnails">	
 	<% @images.each do |img| %>
-		<li class="span4">
+		<li class="span3">
 			<div class="thumbnail">
 
 				<a id="<%= img.id.to_s %>" class="fancybox" rel="popover" href="<%= img.image.url %>" class="thumbnail" data-placement="bottom" data-trigger="hover" data-content="<%= img.description %>">

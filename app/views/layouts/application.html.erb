@@ -38,14 +38,16 @@
     </div>
 
     <header class="subhead" id="overview">
-      <div class="container">
+      <div class="container-fluid">
         <h3>Grubenkarte</h3>
       </div>
     </header>
 
-    <div class="container fill">
-      <p></p>
-      <%= yield %>
+    <div class="container-fluid">      
+      <div class="row-fluid">
+        <p></p>
+        <%= yield %>
+      </div>
     </div>
   </body>
   

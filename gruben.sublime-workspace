@@ -291,6 +291,38 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 2064,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/image_artifacts/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 1803,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/maps/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 4979,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/images/blank.gif",
+			"settings":
+			{
+				"buffer_size": 107,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/Ruby/Ruby.sublime-build",
 	"command_palette":
@@ -303,7 +335,10 @@
 	},
 	"console":
 	{
-		"height": 129.0
+		"height": 129.0,
+		"history":
+		[
+		]
 	},
 	"distraction_free":
 	{
@@ -316,6 +351,11 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
+		"/C/Projects/ruby/Gruben/app/assets/javascripts/leaflet-providers.js",
+		"/C/Projects/ruby/Gruben.old/app/assets/javascripts/leaflet-providers.js",
+		"/C/Projects/ruby/Gruben/app/assets/stylesheets/leaflet.css",
+		"/C/Projects/ruby/Gruben/app/assets/javascripts/leaflet.js",
 		"/C/Projects/ruby/Gruben/Gemfile",
 		"/C/Projects/ruby/Gruben/app/controllers/image_artifacts_controller.rb",
 		"/C/Projects/ruby/BergwerkPage/source/map.html.erb",
@@ -438,16 +478,11 @@
 		"/C/Projects/GrubenApp/gruben-wanderweg.html",
 		"/C/Java/phonegap/projects/TestApp/assets/www/index.html",
 		"/C/Java/phonegap/projects/EmployeeDirectoryLocal/www/js/iscroll.js",
-		"/C/Java/phonegap/projects/EmployeeDirectoryJQM/www/js/employeelist.js",
-		"/C/Java/phonegap/projects/EmployeeDirectoryJQM/www/index.html",
-		"/C/Projects/ruby/BigSwiftBrother/app/views/statistic/session.html.erb",
-		"/C/Projects/ruby/BigSwiftBrother/app/controllers/statistic_controller.rb",
-		"/C/Projects/ruby/BigSwiftBrother/app/views/statistic/params_session.html.erb",
-		"/C/Projects/ruby/BigSwiftBrother/app/models/statistic.rb"
+		"/C/Java/phonegap/projects/EmployeeDirectoryJQM/www/js/employeelist.js"
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -463,6 +498,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"images",
 			"style=\"width: 260; height: 180px;\"",
 			"gly",
 			"glyph",
@@ -593,8 +629,120 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/views/layouts/application.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2064,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1360,
+								1360
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/image_artifacts/index.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1803,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								399,
+								399
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/maps/index.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								370,
+								370
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/assets/images/blank.gif",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 107,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -633,6 +781,7 @@
 	{
 		"height": 357.0
 	},
+	"project": "gruben.sublime-project",
 	"replace":
 	{
 		"height": 63.0
@@ -670,10 +819,24 @@
 		],
 		"width": 380.0
 	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 372.0,
-	"status_bar_visible": true
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
 }

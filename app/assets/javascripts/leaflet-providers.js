@@ -50,6 +50,12 @@
 	 * see http://leafletjs.com/reference.html#tilelayer for options in the options map.
 	 */
 	L.TileLayer.Provider.providers = {
+		OpenCycleMap4U: {
+			url: 'http://4umaps.eu/{z}/{x}/{y}.png',
+			options: {
+				attribution: '&copy; <a href="http://www4umaps.eu">4UMaps</a>, <a href="http://4umaps.org">4UMaps</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+			}
+		},
 		OpenStreetMap: {
 			url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 			options: {
