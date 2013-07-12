@@ -7,6 +7,7 @@ Gruben::Application.routes.draw do
 
     collection do
       post "adit"
+      get "download"
     end
   end
 

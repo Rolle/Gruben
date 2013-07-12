@@ -4,6 +4,7 @@
 	  <%= select_tag :adit_id, options_from_collection_for_select(@adits, "id", "name"), :class => "input-xlarge" %>
 	  <%= submit_tag "Zeige"%>
 	<%end%>
+	<%= link_to "WP-Download für Orux", download_image_artifacts_path %>
 </div>
 
 <ul class="thumbnails">	

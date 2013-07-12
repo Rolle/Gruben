@@ -291,38 +291,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/views/layouts/application.html.erb",
-			"settings":
-			{
-				"buffer_size": 2064,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/image_artifacts/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 1803,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/maps/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 4979,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/assets/images/blank.gif",
-			"settings":
-			{
-				"buffer_size": 107,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/Ruby/Ruby.sublime-build",
 	"command_palette":
@@ -352,6 +320,8 @@
 	"file_history":
 	[
 		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
+		"/C/Projects/ruby/Gruben/app/views/layouts/application.html.erb",
+		"/C/Projects/ruby/Gruben/app/views/image_artifacts/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/assets/javascripts/leaflet-providers.js",
 		"/C/Projects/ruby/Gruben.old/app/assets/javascripts/leaflet-providers.js",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/leaflet.css",
@@ -476,9 +446,7 @@
 		"/C/Projects/GrubenApp/index.html",
 		"/C/Java/phonegap/projects/EmployeeDirectoryLocal/www/index.html",
 		"/C/Projects/GrubenApp/gruben-wanderweg.html",
-		"/C/Java/phonegap/projects/TestApp/assets/www/index.html",
-		"/C/Java/phonegap/projects/EmployeeDirectoryLocal/www/js/iscroll.js",
-		"/C/Java/phonegap/projects/EmployeeDirectoryJQM/www/js/employeelist.js"
+		"/C/Java/phonegap/projects/TestApp/assets/www/index.html"
 	],
 	"find":
 	{
@@ -629,120 +597,8 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/views/layouts/application.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2064,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1360,
-								1360
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 225.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/image_artifacts/index.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1803,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								399,
-								399
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/views/maps/index.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4979,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								370,
-								370
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/assets/images/blank.gif",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 107,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],

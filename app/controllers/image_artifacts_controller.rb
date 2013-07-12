@@ -2,6 +2,31 @@ class ImageArtifactsController < ApplicationController
   before_filter :require_user
   respond_to :html, :js, :json
 
+  def download
+    image_artifacts = ImageArtifact.find(:all)
+    b = Builder::XmlMarkup.new
+    b.instruct!
+    xml = b.xml {
+      b.kml {
+        b.Document {
+          b.name "Gruben"
+          image_artifacts.each do |image| 
+            b.Placemark {
+              b.name image.adit.name
+              b.Point {
+                b.coordinates "#{image.longitude},#{image.latitude},0"
+              }
+            }
+          end
+        }
+      }
+    }
+
+
+    send_data(xml,   :type => 'text/xml; charset=UTF-8;', 
+                                  :disposition => "attachment; filename=image_artifacts.xml")
+  end
+
   def new
   	@page_id = "image_upload"
   	@image_artifact = ImageArtifact.new

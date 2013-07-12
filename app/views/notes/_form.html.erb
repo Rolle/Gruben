@@ -3,8 +3,7 @@
   <div class="control-group">
     <%= f.label "Notizen:", :class => "control-label" %>
     <div class="controls">
-      <%= text_area_tag :notice, "", :class => "tinymce", :rows => 40, :cols => 70 %>
-
+    	<%= f.text_area :notice, :class => "tinymce", :rows => 40, :cols => 70 %>
     </div>
   </div>
   <div class="actions">

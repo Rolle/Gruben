@@ -31,6 +31,7 @@ gem 'authlogic'
 gem 'tinymce-rails'
 gem 'paperclip'
 gem 'exifr'
+gem 'builder'
 
 #group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
