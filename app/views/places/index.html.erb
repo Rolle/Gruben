@@ -1,0 +1,39 @@
+<div class="well well-small">
+  <%= link_to 'Neu', new_place_path, :class => "btn btn-primary" %>
+  <%= link_to "WP-Download für Orux", download_places_path %>
+</div>
+
+<% if flash[:notice] %>
+  <div class="alert alert-success">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>Info</strong> <%= flash[:notice] %>
+  </div>
+<% end %>
+<% if flash[:error] %>
+    <div class="alert">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>Info</strong> <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<table class="table table-bordered table-striped" id="user_table">
+    <thead>
+      <tr>
+        <th>Beschreibung</th>
+        <th>Link</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+		<% @places.each do |place| %>
+	   		<tr>
+				<td><%= place.description %></td>				
+				<td><%= place.link %></td>
+  				<td><%= link_to 'Bearbeiten', edit_place_path(place), :class => "btn btn-primary btn-small" %></td>
+  				<td><%= link_to 'Löschen', place, :confirm => 'Wirklich wirklich löschen?', :method => :delete, :class => "btn btn-primary btn-small" %>
+  				</td>
+    		</tr>
+    	<% end %>
+  	</tbody>
+</table>

@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"marker",
+				"marker_places"
+			],
+			[
+				"maker",
+				"marker_places"
+			],
+			[
+				"layer",
+				"layerGroup"
+			],
+			[
+				"image_art",
+				"image_artifacts"
+			],
+			[
+				"image_arti",
+				"image_artifact_map_path"
+			],
+			[
 				"mark",
 				"markers_track"
 			],
@@ -14,10 +34,6 @@
 			[
 				"Imge",
 				"ImageArtifact"
-			],
-			[
-				"marker",
-				"markers_adits"
 			],
 			[
 				"open",
@@ -291,6 +307,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 2211,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/places/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 1213,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/places_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1533,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/Ruby/Ruby.sublime-build",
 	"command_palette":
@@ -319,15 +359,27 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/ruby/Gruben/app/controllers/places_controller.rb",
+		"/C/Projects/ruby/Gruben/app/controllers/image_artifacts_controller.rb",
+		"/C/Projects/ruby/Gruben/app/controllers/adits_controller.rb",
+		"/C/Projects/ruby/Gruben/app/controllers/maps_controller.rb",
 		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
-		"/C/Projects/ruby/Gruben/app/views/layouts/application.html.erb",
+		"/C/Projects/ruby/Gruben/app/views/places/index.html.erb",
+		"/C/Projects/ruby/Gruben/app/views/places/new.html.erb",
+		"/C/Projects/ruby/Gruben/app/views/places/create.html.erb",
+		"/C/Projects/ruby/Gruben/app/views/places/_form.html.erb",
+		"/C/Projects/ruby/Gruben/app/views/places/edit.html.erb",
+		"/C/Projects/ruby/Gruben/app/helpers/application_helper.rb",
+		"/C/Projects/ruby/Gruben/app/views/image_artifacts/new.html.erb",
+		"/C/Projects/ruby/Gruben/config/routes.rb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/index.html.erb",
+		"/C/Projects/ruby/Gruben/app/views/notes/_form.html.erb",
+		"/C/Projects/ruby/Gruben/Gemfile",
+		"/C/Projects/ruby/Gruben/app/views/layouts/application.html.erb",
 		"/C/Projects/ruby/Gruben/app/assets/javascripts/leaflet-providers.js",
 		"/C/Projects/ruby/Gruben.old/app/assets/javascripts/leaflet-providers.js",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/leaflet.css",
 		"/C/Projects/ruby/Gruben/app/assets/javascripts/leaflet.js",
-		"/C/Projects/ruby/Gruben/Gemfile",
-		"/C/Projects/ruby/Gruben/app/controllers/image_artifacts_controller.rb",
 		"/C/Projects/ruby/BergwerkPage/source/map.html.erb",
 		"/C/Projects/ruby/BergwerkPage/source/javascripts/map.js",
 		"/C/Projects/ruby/BergwerkPage/source/javascripts/Google.js",
@@ -434,19 +486,7 @@
 		"/C/Projects/ruby/GrubenMap/app/controllers/map_controller.rb",
 		"/C/Projects/ruby/PPPP/config/routes.rb",
 		"/C/Projects/ruby/GrubenMap/app/controllers/application_controller.rb",
-		"/C/Projects/ruby/PPPP/app/controllers/application_controller.rb",
-		"/C/Projects/ruby/GrubenMap/app/assets/stylesheets/leaflet.css",
-		"/C/Projects/ruby/GrubenMap/app/assets/stylesheets/bootstrap.css",
-		"/C/Projects/SchieferbergwerkApp/css/my.css",
-		"/C/Users/schmrol/AppData/Local/Temp/Rar$DRa0.170/jquery.mobile-1.2.0/jquery.mobile-1.2.0.css",
-		"/C/Projects/SchieferbergwerkApp/index.html",
-		"/C/Projects/SchieferbergwerkApp/css/jplayer.blue.monday.css",
-		"/C/Projects/SchieferbergwerkApp/themes/SteinWein.css",
-		"/C/Users/schmrol/AppData/Local/Temp/Rar$DRa0.317/index.html",
-		"/C/Projects/GrubenApp/index.html",
-		"/C/Java/phonegap/projects/EmployeeDirectoryLocal/www/index.html",
-		"/C/Projects/GrubenApp/gruben-wanderweg.html",
-		"/C/Java/phonegap/projects/TestApp/assets/www/index.html"
+		"/C/Projects/ruby/PPPP/app/controllers/application_controller.rb"
 	],
 	"find":
 	{
@@ -597,8 +637,96 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "config/routes.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2211,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								324,
+								324
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/places/index.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1213,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								151,
+								151
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/controllers/places_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1533,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								596,
+								596
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

@@ -3,7 +3,7 @@ class ImageArtifactsController < ApplicationController
   respond_to :html, :js, :json
 
   def download
-    image_artifacts = ImageArtifact.find(:all)
+    image_artifacts = ImageArtifact.all
     b = Builder::XmlMarkup.new
     b.instruct!
     xml = b.xml {

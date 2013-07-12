@@ -34,7 +34,7 @@ class AditsController < ApplicationController
 
   def update
     @adit = Adit.find(params[:id])
-    @adit.update_attributes(params[:adit])
+    @adit.update_attributes(adit_params)
     flash[:notice] = "Datensatz wurde aktualisiert."
     redirect_to :action => :index
   end

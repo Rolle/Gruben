@@ -1,4 +1,8 @@
 Gruben::Application.routes.draw do
+  get "places/index"
+  get "places/update"
+  get "places/delete"
+  get "places/create"
   resources :image_artifacts do
     member do
       get "flag"
@@ -11,6 +15,11 @@ Gruben::Application.routes.draw do
     end
   end
 
+  resources :places do
+    collection do
+      get "download"
+    end
+  end
   resources :maps do
     collection do
       post "adit"
@@ -27,6 +36,7 @@ Gruben::Application.routes.draw do
   resources :notes
   resources :image_artifacts
   resources :markers
+  resources :places
 
   get 'login' => 'user_sessions#new', :as => :login
   get 'logout' => 'user_sessions#destroy', :as => :logout

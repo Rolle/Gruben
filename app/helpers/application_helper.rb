@@ -34,7 +34,12 @@ module ApplicationHelper
         content << '<li class="active"><a href='+edit_note_path(1)+'><i class="icon-list-alt"></i> Notiz</a></li>'
       else
         content << '<li><a href='+edit_note_path(1)+'><i class="icon-list-alt"></i> Notiz</a></li>'
-      end  
+      end
+      if page_id.start_with? "place_"
+        content << '<li class="active"><a href='+places_path+'><i class="icon-list-alt"></i> Orte</a></li>'
+      else
+        content << '<li><a href='+places_path+'><i class="icon-list-alt"></i> Orte</a></li>'
+      end        
     end
     if current_user
       content << '<li><a href="/logout"><i class="icon-file"></i> Logout</a></li>'
