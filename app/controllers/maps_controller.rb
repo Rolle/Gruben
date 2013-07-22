@@ -4,7 +4,6 @@ class MapsController < ApplicationController
   	def index
   		@page_id = "map_"
   		@images_adit = ImageArtifact.where("imgtype = 0")
-      @markers = Marker.all
   		@adits = Adit.with_images
       @places = Place.all
   		#@adits = Adit.find(:all, :order => "name")

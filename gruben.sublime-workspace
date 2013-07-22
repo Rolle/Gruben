@@ -311,7 +311,23 @@
 			"file": "app/controllers/maps_controller.rb",
 			"settings":
 			{
-				"buffer_size": 713,
+				"buffer_size": 685,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/application.js",
+			"settings":
+			{
+				"buffer_size": 909,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/maps/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 3534,
 				"line_ending": "Windows"
 			}
 		}
@@ -490,6 +506,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"drawnItems",
+			"markers_flag",
+			"markers_adits_groupless",
+			"addLayer",
+			"ggl",
 			"images",
 			"style=\"width: 260; height: 180px;\"",
 			"gly",
@@ -621,7 +642,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -630,15 +651,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 713,
+						"buffer_size": 685,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								679,
-								679
+								353,
+								353
 							]
 						],
 						"settings":
@@ -649,6 +670,61 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/assets/javascripts/application.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 909,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								813,
+								813
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/maps/index.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3534,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1141,
+								1141
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 84.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

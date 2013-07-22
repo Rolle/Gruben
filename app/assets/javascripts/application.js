@@ -14,13 +14,11 @@
 //= require jquery_ujs
 //= require bootstrap.min
 //= require leaflet
-//= require leaflet.markercluster
 //= require leaflet.label
 //= require Control.FullScreen
 //= require Google
 //= require jquery.fancybox
 //= require jquery.mousewheel-3.0.6.pack
-//= require leaflet.draw
 //= require leaflet.awesome-markers.min
 //= require leaflet-providers
 //= require tinymce-jquery

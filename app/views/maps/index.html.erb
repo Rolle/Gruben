@@ -19,24 +19,35 @@
 	var fullScreen = new L.Control.FullScreen(); 
 	map.addControl(fullScreen);
 
-
-	//var osm = L.tileLayer.provider('OpenStreetMap.DE');
 	var osm = L.tileLayer.provider('OpenCycleMap4U');
+	var ggl = new L.Google();
 
-	var markers_adits = new L.MarkerClusterGroup({maxClusterRadius: 10});
-	var markers_flag = L.layerGroup();
-	var markers_adits_groupless = L.layerGroup();
-	var markers_main = L.layerGroup();
-	var marker_places = L.layerGroup();
+	var markers_adits = L.featureGroup();
+	var markers_main = L.featureGroup();
+	var marker_places = L.featureGroup();
+	var markers_flag = L.featureGroup();
 
 	//var bing = new L.BingLayer("Anqm0F_JjIZvT0P3abS6KONpaBaKuTnITRrnYuiJCE0WOhH6ZbE4DzeT6brvKVR5");
 	var markers_to_id = new Array();
-	var ggl = new L.Google();
-
+	
 	map.addLayer(osm);
+	map.addLayer(ggl);
+	map.addLayer(markers_flag);
+	map.addLayer(markers_adits);
+	map.addLayer(markers_main);
+	map.addLayer(marker_places);
 
-	var drawnItems = new L.FeatureGroup();
-	map.addLayer(drawnItems);
+	var baseMaps = {
+		"OSM": osm,
+		"Satellit": ggl
+	};
+
+	var overlayMaps = {
+	    "Gruben": markers_adits,
+	    "Markierungen": markers_flag,
+	    "Hauptgruben": markers_main,
+	    "Orte": marker_places
+	};
 	
 	//icon for main adits
 	var redMarker = L.AwesomeMarkers.icon({
@@ -64,41 +75,6 @@
   		icon: 'search', 
   		color: 'cadetblue'
 	})
-
-	var drawControl = new L.Control.Draw({
-		draw: {
-        	polygon: true,
-        	rectangle: false,
-        	circle: true,
-        	polyline: true
-    	},
-        marker: {
-            icon: orangeMarker
-        },    	
-	    edit: {
-	        featureGroup: drawnItems,
-          	remove: true
-	    }
-	});
-	map.addControl(drawControl);
-
-	var baseMaps = {
-		"OSM": osm,
-		"Satellit": ggl
-	};
-	var overlayMaps = {
-	    "Gruppiert": markers_adits,
-	    "Sonstiges": markers_flag,
-	    "Gruben": markers_adits_groupless,
-	    "Markierungen": drawnItems,
-	    "Hauptgruben": markers_main,
-	    "Orte": marker_places
-	};
-	map.addLayer(markers_adits);	
-	map.addLayer(markers_adits_groupless);
-	map.addLayer(markers_main);
-	map.addLayer(markers_flag);
-	map.addLayer(marker_places);
 	
 	L.control.layers(baseMaps, overlayMaps).addTo(map);
 	<% if @places %>
@@ -111,15 +87,19 @@
 			marker_places.addLayer(marker);
 		<% end %>
 	<% end %>
-
+	
 	<% if @images_adit %>
 		<% @images_adit.each do |img| %>
 			<% if img.main %> //main adit
 				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: redMarker});
+				markers_main.addLayer(marker);	
+				markers_adits.addLayer(marker);	
 			<% elsif  img.flag %> //kein Mundloch
 				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: purpleMarker});
+				markers_flag.addLayer(marker);
 			<% else %> //Grube
 				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: blueMarker});
+				markers_adits.addLayer(marker);	
 			<% end %>
 
 			var divNode = document.createElement("div");
@@ -127,62 +107,12 @@
 			marker.bindPopup(divNode).openPopup();
 			marker.bindLabel('<%= img.adit.name %>');				
 
-			<% if img.main %> //main adit
-				markers_main.addLayer(marker);	
-				markers_adits.addLayer(marker);
-				markers_adits_groupless.addLayer(marker);			
-			<% elsif  img.flag %> //kein Mundloch
-				markers_flag.addLayer(marker);
-			<% else %> //Grube
-				markers_adits.addLayer(marker);
-				markers_adits_groupless.addLayer(marker);			
-			<% end %>
 		<% end %>
 	<% end %>
-
-	<% if @markers %>
-		<% @markers.each do |m| %>
-			marker = L.marker([<%= m.latitude %>, <%= m.longitude %>],{icon: orangeMarker});/*, {icon: markerIcon})*/
-			marker.id = <%= m.id.to_s %>
-			drawnItems.addLayer(marker);				
-		<% end %>
-	<% end %>
-
+	
 	<% if @images_adit.size > 1 %>
-		map.fitBounds(markers_adits.getBounds());		
+		map.fitBounds(markers_main.getBounds());		
 	<% else %>
 		map.setView(new L.LatLng(<%= @images_adit[0].latitude%>,<%= @images_adit[0].longitude%>), 12);
 	<% end %>	
-
-	map.on('draw:created', function (e) {
-	    var type = e.layerType, layer = e.layer;
-	    $.ajax({
-          type: "POST",
-          contentType: 'application/json',
-          url: '/markers',
-          data: JSON.stringify({"marker": {"latitude": layer.getLatLng().lat, "longitude": layer.getLatLng().lng }}),          
-          dataType: 'json',
-          success: function(msg) {    
-          	debugger      	
-            layer.id = msg.id;
-          }
-		});	   
-	    drawnItems.addLayer(layer);
-	});
-
-	map.on('draw:deleted', function(e) {
-	    var  layers = e.layers;
-		layers.eachLayer(function (layer) {	    			
-		    $.ajax({
-	          type: "DELETE",
-	          contentType: 'application/json',
-	          url: '/markers/'+layer.id,
-	          data: JSON.stringify({"marker": {"latitude": layer.getLatLng().lat, "longitude": layer.getLatLng().lng }}),          
-	          dataType: 'json',
-	          success: function(msg) {
-	            alert( "Data deleted: " + msg );
-	          }
-			});	
-	    });
-	});
 </script>	
