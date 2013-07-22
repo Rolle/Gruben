@@ -68,15 +68,15 @@
   		icon: 'search', 
   		color: 'cadetblue'
 	})
-	
-	L.control.layers(baseMaps, overlayMaps).addTo(map);
-
-	var overlayMaps = {
+		var overlayMaps = {
 	    "Mundlöcher": markers_adits,
 	    "Sonstiges": markers_flag,
 	    "Gruben": markers_main,
 	    "Orte": marker_places
 	};
+	L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+
 
 	<% if @places %>
 		<% @places.each do |place| %>
