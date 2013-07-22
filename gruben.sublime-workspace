@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"blue",
+				"blueMarker"
+			],
+			[
 				"marker",
 				"marker_places"
 			],
@@ -327,7 +331,7 @@
 			"file": "app/views/maps/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 3534,
+				"buffer_size": 3919,
 				"line_ending": "Windows"
 			}
 		}
@@ -707,15 +711,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3534,
+						"buffer_size": 3919,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1141,
-								1141
+								2915,
+								2915
 							]
 						],
 						"settings":
@@ -724,7 +728,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 84.0,
+						"translation.y": 966.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

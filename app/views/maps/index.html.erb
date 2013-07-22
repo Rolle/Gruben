@@ -95,14 +95,18 @@
 			<% if img.main %> //Grube!
 				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: blueMarker});
 				markers_main.addLayer(marker);	//Gruben
-
-				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: redMarker});
-				markers_adits.addLayer(marker);	//Gruben				
+				<% if !img.flag %> //kein Mundloch, aber Grube
+					marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: orangeMarker});
+					markers_adits.addLayer(marker);
+				<% end %>			
 			<% end %>
 			
 			<% if img.flag %> //kein Mundloch, aber Grube
 				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: orangeMarker});
 				markers_main.addLayer(marker);
+			<% else %>
+				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: redMarker});
+				markers_adits.addLayer(marker);	//Mundlöcher				
 			<% end %>
 
 			<% if !img.flag and !img.main %> //Sonstiges
