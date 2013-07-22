@@ -308,27 +308,11 @@
 	"buffers":
 	[
 		{
-			"file": "config/routes.rb",
+			"file": "app/controllers/maps_controller.rb",
 			"settings":
 			{
-				"buffer_size": 2211,
+				"buffer_size": 713,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/places/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 1213,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/places_controller.rb",
-			"settings":
-			{
-				"buffer_size": 1533,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -359,19 +343,19 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
+		"/C/Projects/ruby/Gruben/config/routes.rb",
+		"/C/Projects/ruby/Gruben/app/views/places/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/controllers/places_controller.rb",
 		"/C/Projects/ruby/Gruben/app/controllers/image_artifacts_controller.rb",
 		"/C/Projects/ruby/Gruben/app/controllers/adits_controller.rb",
 		"/C/Projects/ruby/Gruben/app/controllers/maps_controller.rb",
-		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
-		"/C/Projects/ruby/Gruben/app/views/places/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/places/new.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/places/create.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/places/_form.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/places/edit.html.erb",
 		"/C/Projects/ruby/Gruben/app/helpers/application_helper.rb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/new.html.erb",
-		"/C/Projects/ruby/Gruben/config/routes.rb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/notes/_form.html.erb",
 		"/C/Projects/ruby/Gruben/Gemfile",
@@ -637,82 +621,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "config/routes.rb",
+					"file": "app/controllers/maps_controller.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2211,
+						"buffer_size": 713,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								324,
-								324
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/places/index.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1213,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								151,
-								151
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/controllers/places_controller.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1533,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								596,
-								596
+								679,
+								679
 							]
 						],
 						"settings":

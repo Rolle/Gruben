@@ -101,38 +101,42 @@
 	map.addLayer(marker_places);
 	
 	L.control.layers(baseMaps, overlayMaps).addTo(map);
-	<% @places.each do |place| %>
-		marker = L.marker([<%= place.latitude %>, <%= place.longitude %>], {icon: darkblueMarker});
-		var divNode = document.createElement("div");
-		divNode.innerHTML = '<%= place.link %>';
-		marker.bindPopup(divNode).openPopup();
-		marker.bindLabel('<%= place.description %>');
-		marker_places.addLayer(marker);
+	<% if @places %>
+		<% @places.each do |place| %>
+			marker = L.marker([<%= place.latitude %>, <%= place.longitude %>], {icon: darkblueMarker});
+			var divNode = document.createElement("div");
+			divNode.innerHTML = '<%= place.link %>';
+			marker.bindPopup(divNode).openPopup();
+			marker.bindLabel('<%= place.description %>');
+			marker_places.addLayer(marker);
+		<% end %>
 	<% end %>
 
-	<% @images_adit.each do |img| %>
-		<% if img.main %> //main adit
-			marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: redMarker});
-		<% elsif  img.flag %> //kein Mundloch
-			marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: purpleMarker});
-		<% else %> //Grube
-			marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: blueMarker});
-		<% end %>
+	<% if @images_adit %>
+		<% @images_adit.each do |img| %>
+			<% if img.main %> //main adit
+				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: redMarker});
+			<% elsif  img.flag %> //kein Mundloch
+				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: purpleMarker});
+			<% else %> //Grube
+				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: blueMarker});
+			<% end %>
 
-		var divNode = document.createElement("div");
-		divNode.innerHTML = '<%= raw popup(img) %>';
-		marker.bindPopup(divNode).openPopup();
-		marker.bindLabel('<%= img.adit.name %>');				
+			var divNode = document.createElement("div");
+			divNode.innerHTML = '<%= raw popup(img) %>';
+			marker.bindPopup(divNode).openPopup();
+			marker.bindLabel('<%= img.adit.name %>');				
 
-		<% if img.main %> //main adit
-			markers_main.addLayer(marker);	
-			markers_adits.addLayer(marker);
-			markers_adits_groupless.addLayer(marker);			
-		<% elsif  img.flag %> //kein Mundloch
-			markers_flag.addLayer(marker);
-		<% else %> //Grube
-			markers_adits.addLayer(marker);
-			markers_adits_groupless.addLayer(marker);			
+			<% if img.main %> //main adit
+				markers_main.addLayer(marker);	
+				markers_adits.addLayer(marker);
+				markers_adits_groupless.addLayer(marker);			
+			<% elsif  img.flag %> //kein Mundloch
+				markers_flag.addLayer(marker);
+			<% else %> //Grube
+				markers_adits.addLayer(marker);
+				markers_adits_groupless.addLayer(marker);			
+			<% end %>
 		<% end %>
 	<% end %>
 
