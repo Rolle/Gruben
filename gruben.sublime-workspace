@@ -312,26 +312,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/maps_controller.rb",
+			"file": "app/views/image_artifacts/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 685,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/application.js",
-			"settings":
-			{
-				"buffer_size": 909,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/maps/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 3919,
+				"buffer_size": 2059,
 				"line_ending": "Windows"
 			}
 		}
@@ -363,13 +347,17 @@
 	},
 	"file_history":
 	[
-		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
+		"/C/Projects/ruby/Gruben/app/helpers/maps_helper.rb",
+		"/C/Projects/ruby/Gruben/app/controllers/image_artifacts_controller.rb",
 		"/C/Projects/ruby/Gruben/config/routes.rb",
+		"/C/Projects/ruby/Gruben/app/helpers/image_artifacts_helper.rb",
+		"/C/Projects/ruby/Gruben/db/migrate/20130725124331_add_adit_to_image_artifacs.rb",
+		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
+		"/C/Projects/ruby/Gruben/app/controllers/maps_controller.rb",
+		"/C/Projects/ruby/Gruben/app/assets/javascripts/application.js",
 		"/C/Projects/ruby/Gruben/app/views/places/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/controllers/places_controller.rb",
-		"/C/Projects/ruby/Gruben/app/controllers/image_artifacts_controller.rb",
 		"/C/Projects/ruby/Gruben/app/controllers/adits_controller.rb",
-		"/C/Projects/ruby/Gruben/app/controllers/maps_controller.rb",
 		"/C/Projects/ruby/Gruben/app/views/places/new.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/places/create.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/places/_form.html.erb",
@@ -486,11 +474,7 @@
 		"/C/Projects/ruby/GrubenMap/app/models/adit.rb",
 		"/C/Projects/ruby/GrubenMap/db/migrate/20121217105433_add_attachment_image_to_imageartifacts.rb",
 		"/C/Projects/ruby/GrubenMap/app/assets/javascripts/application.js",
-		"/C/Projects/ruby/GrubenMap/app/assets/stylesheets/docs.css",
-		"/C/Projects/ruby/GrubenMap/app/controllers/map_controller.rb",
-		"/C/Projects/ruby/PPPP/config/routes.rb",
-		"/C/Projects/ruby/GrubenMap/app/controllers/application_controller.rb",
-		"/C/Projects/ruby/PPPP/app/controllers/application_controller.rb"
+		"/C/Projects/ruby/GrubenMap/app/assets/stylesheets/docs.css"
 	],
 	"find":
 	{
@@ -646,80 +630,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/maps_controller.rb",
+					"file": "app/views/image_artifacts/index.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 685,
+						"buffer_size": 2059,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								353,
-								353
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/assets/javascripts/application.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 909,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								813,
-								813
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/views/maps/index.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3919,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2915,
-								2915
+								396,
+								396
 							]
 						],
 						"settings":
@@ -728,7 +656,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 966.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -824,7 +752,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 372.0,
+	"side_bar_width": 375.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

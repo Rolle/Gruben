@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130712111933) do
+ActiveRecord::Schema.define(version: 20130725124331) do
 
   create_table "adits", force: true do |t|
     t.string   "name"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20130712111933) do
     t.string   "description"
     t.boolean  "flag"
     t.boolean  "main",               default: false
+    t.boolean  "adit",               default: false
   end
 
   create_table "markers", force: true do |t|

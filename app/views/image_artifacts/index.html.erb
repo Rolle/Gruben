@@ -26,11 +26,16 @@
 					    :remote=> true, :url => url_for(action: :main, id: img.id), id: img.id
 					  }
 					)-%> Grube/Stollen
+					<%= check_box_tag( 'ck'+img.id.to_s, img.id, img.adit,					  
+					  :data => {
+					    :remote=> true, :url => url_for(action: :adit, id: img.id), id: img.id
+					  }
+					)-%> Primär
 					<%= check_box_tag( 'ck'+img.id.to_s, img.id, img.flag,					  
 					  :data => {
 					    :remote=> true, :url => url_for(action: :flag, id: img.id), id: img.id
 					  }
-					)-%> Kein Mundloch
+					)-%> Mundloch
 	    		</div>	
 	    	</div>
     	</li>

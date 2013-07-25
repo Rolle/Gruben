@@ -33,6 +33,15 @@ class ImageArtifactsController < ApplicationController
     @adits = Adit.find(:all, :order => "name ASC")
   end
 
+  def adit
+    @page_id = "image_"
+    @image = ImageArtifact.find(params[:id])
+    @image.update_attribute(:adit, !@image.adit)
+    respond_to do |format|
+      render :nothing => true
+    end
+  end
+
   def flag
     @page_id = "image_"
     @image = ImageArtifact.find(params[:id])

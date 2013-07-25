@@ -30,7 +30,7 @@
 	//var bing = new L.BingLayer("Anqm0F_JjIZvT0P3abS6KONpaBaKuTnITRrnYuiJCE0WOhH6ZbE4DzeT6brvKVR5");
 	var markers_to_id = new Array();
 	
-	map.addLayer(osm);
+	//map.addLayer(osm);
 	map.addLayer(ggl);
 	map.addLayer(markers_flag);
 	map.addLayer(markers_adits);
@@ -44,7 +44,7 @@
 
 	//icon for main adits
 	var redMarker = L.AwesomeMarkers.icon({
-  		icon: 'star', 
+  		icon: 'search', 
   		color: 'red'
 	})
 	//icon for markers
@@ -63,12 +63,8 @@
   		color: 'purple'
 	})
 
-	//icon for place 
-	var darkblueMarker = L.AwesomeMarkers.icon({
-  		icon: 'search', 
-  		color: 'cadetblue'
-	})
-		var overlayMaps = {
+	
+	var overlayMaps = {
 	    "Mundlöcher": markers_adits,
 	    "Sonstiges": markers_flag,
 	    "Gruben": markers_main,
@@ -80,7 +76,7 @@
 
 	<% if @places %>
 		<% @places.each do |place| %>
-			marker = L.marker([<%= place.latitude %>, <%= place.longitude %>], {icon: darkblueMarker});
+			marker = L.marker([<%= place.latitude %>, <%= place.longitude %>], {icon: redMarker});
 			var divNode = document.createElement("div");
 			divNode.innerHTML = '<%= place.link %>';
 			marker.bindPopup(divNode).openPopup();
@@ -95,21 +91,11 @@
 			<% if img.main %> //Grube!
 				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: blueMarker});
 				markers_main.addLayer(marker);	//Gruben
-				<% if !img.flag %> //kein Mundloch, aber Grube
+				<% if !img.flag %> // Grube, kein Mundloch
 					marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: orangeMarker});
 					markers_adits.addLayer(marker);
 				<% end %>			
-			<% end %>
-			
-			<% if img.flag %> //kein Mundloch, aber Grube
-				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: orangeMarker});
-				markers_main.addLayer(marker);
 			<% else %>
-				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: redMarker});
-				markers_adits.addLayer(marker);	//Mundlöcher				
-			<% end %>
-
-			<% if !img.flag and !img.main %> //Sonstiges
 				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: purpleMarker});
 				markers_flag.addLayer(marker);	
 			<% end %>
