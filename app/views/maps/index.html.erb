@@ -65,9 +65,9 @@
 
 	
 	var overlayMaps = {
-	    "Mundlöcher": markers_adits,
-	    "Sonstiges": markers_flag,
-	    "Gruben": markers_main,
+	    "Gruben": markers_adits,
+	    "Mundlöcher": markers_main,
+	    "Sonstiges": markers_flag,	    
 	    "Orte": marker_places
 	};
 	L.control.layers(baseMaps, overlayMaps).addTo(map);
@@ -91,20 +91,26 @@
 			<% if img.main %> //Grube!
 				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: blueMarker});
 				markers_main.addLayer(marker);	//Gruben
-				<% if !img.flag %> // Grube, kein Mundloch
+				var divNode = document.createElement("div");
+				divNode.innerHTML = '<%= raw popup(img) %>';
+				marker.bindPopup(divNode).openPopup();
+				marker.bindLabel('<%= img.adit.name %>');
+				<% if img.adit %> //Primär
 					marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: orangeMarker});
 					markers_adits.addLayer(marker);
+					var divNode = document.createElement("div");
+					divNode.innerHTML = '<%= raw popup(img) %>';
+					marker.bindPopup(divNode).openPopup();
+					marker.bindLabel('<%= img.adit.name %>');
 				<% end %>			
 			<% else %>
 				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: purpleMarker});
-				markers_flag.addLayer(marker);	
+				markers_flag.addLayer(marker);
+				var divNode = document.createElement("div");
+				divNode.innerHTML = '<%= raw popup(img) %>';
+				marker.bindPopup(divNode).openPopup();
+				marker.bindLabel('<%= img.adit.name %>');		
 			<% end %>
-
-			var divNode = document.createElement("div");
-			divNode.innerHTML = '<%= raw popup(img) %>';
-			marker.bindPopup(divNode).openPopup();
-			marker.bindLabel('<%= img.adit.name %>');				
-
 		<% end %>
 	<% end %>
 	
