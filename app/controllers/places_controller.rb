@@ -20,7 +20,7 @@ class PlacesController < ApplicationController
     }
 
 
-    send_data(xml,   :type => 'text/xml; charset=UTF-8;', :disposition => "attachment; filename=adit_places.xml")
+    send_data(xml,   :type => 'text/xml; charset=UTF-8;', :disposition => "attachment; filename=adit_places.kml")
   end
 
   def index

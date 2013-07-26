@@ -24,7 +24,7 @@ class ImageArtifactsController < ApplicationController
 
 
     send_data(xml,   :type => 'text/xml; charset=UTF-8;', 
-                                  :disposition => "attachment; filename=image_artifacts.xml")
+                                  :disposition => "attachment; filename=image_artifacts.kml")
   end
 
   def new
