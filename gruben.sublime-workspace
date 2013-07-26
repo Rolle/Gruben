@@ -328,6 +328,14 @@
 			}
 		},
 		{
+			"file": "db/schema.rb",
+			"settings":
+			{
+				"buffer_size": 5611,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "app/helpers/maps_helper.rb",
 			"settings":
 			{
@@ -654,7 +662,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -717,6 +725,35 @@
 				},
 				{
 					"buffer": 2,
+					"file": "db/schema.rb",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 5611,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "app/helpers/maps_helper.rb",
 					"semi_transient": false,
 					"settings":
@@ -743,7 +780,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "app/views/image_artifacts/index.html.erb",
 					"semi_transient": false,
 					"settings":
