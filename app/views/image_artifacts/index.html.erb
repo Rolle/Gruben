@@ -26,9 +26,9 @@
 					    :remote=> true, :url => url_for(action: :main, id: img.id), id: img.id
 					  }
 					)-%> Grube/Stollen
-					<%= check_box_tag( 'ck'+img.id.to_s, img.id, img.adit,					  
+					<%= check_box_tag( 'ck'+img.id.to_s, img.id, img.primary,					  
 					  :data => {
-					    :remote=> true, :url => url_for(action: :adit, id: img.id), id: img.id
+					    :remote=> true, :url => url_for(action: :primary, id: img.id), id: img.id
 					  }
 					)-%> Primär
 					<%= check_box_tag( 'ck'+img.id.to_s, img.id, img.flag,					  

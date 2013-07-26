@@ -7,7 +7,7 @@ Gruben::Application.routes.draw do
     member do
       get "flag"
       get "main"
-      get "adit"
+      get "primary"
     end
 
     collection do
