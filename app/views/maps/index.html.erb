@@ -95,7 +95,7 @@
 				divNode.innerHTML = '<%= raw popup(img) %>';
 				marker.bindPopup(divNode).openPopup();
 				marker.bindLabel('<%= img.adit.name %>');
-				<% if img.adit %> //Primär
+				<% if img.primary %> //Primär
 					marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: orangeMarker});
 					markers_adits.addLayer(marker);
 					var divNode = document.createElement("div");
