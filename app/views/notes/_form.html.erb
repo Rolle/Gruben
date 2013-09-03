@@ -1,12 +1,12 @@
 <%= tinymce_assets %>
 <%= form_for(@note) do |f| %>
-  <div class="control-group">
-    <%= f.label "Notizen:", :class => "control-label" %>
+  <div class="form-group">
+    <%= f.label "Notizen:", :class => "form-label" %>
     <div class="controls">
-    	<%= f.text_area :notice, :class => "tinymce", :rows => 40, :cols => 70 %>
+    	<%= f.text_area :notice, :class => "tinymce form-control", :rows => 40, :cols => 70 %>
     </div>
   </div>
-  <div class="actions">
+  <div class="form-group">
     <%= f.submit "Speichern", :class=>"btn btn-primary" %>
   </div>
 <% end %>

@@ -1,5 +1,5 @@
 <%= tinymce_assets %>
-<div class="well">
+<div class="well well-small">
 	<% if flash[:notice] %>
 		<div class="alert alert-success">
   			<button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -15,21 +15,21 @@
     
 	<%= form_for(@image) do |f| %>
 
-	  	<div class="control-group">
-	    	<%= f.label "Grube:", :class => "control-label" %>
+	  	<div class="form-group">
+	    	<%= f.label "Grube:", :class => "form-label" %>
 	    	<div class="controls">
-	      		<%= f.select :adit_id, options_from_collection_for_select(@adits, "id", "name",6), :class => "input-xlarge" %>
+	      		<%= f.select :adit_id, options_from_collection_for_select(@adits, "id", "name",6), :class => "input-xlarge form-control" %>
 	    	</div>
 	  	</div>
 	  	
-	  	<div class="control-group">
-	    	<%= f.label "Beschreibung:", :class => "control-label" %>
+	  	<div class="form-group">
+	    	<%= f.label "Beschreibung:", :class => "form-label" %>
 	    	<div class="controls">
-	      		<%= text_area_tag :description, "", :class => "tinymce", :rows => 40, :cols => 120 %>
+	      		<%= text_area_tag :description, "", :class => "tinymce form-control", :rows => 40, :cols => 120 %>
 	    	</div>
 	  	</div>
 
-		<div class="actions">
+		<div class="form-group">
 	    	<%= f.submit "Speichern", :class=>"btn btn-primary" %>
 	  	</div>
 	  	

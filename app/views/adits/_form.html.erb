@@ -14,28 +14,28 @@
     <% end %>
     
 	<%= form_for(@adit) do |f| %>
-	  	<div class="control-group">
+	  	<div class="form-group">
 	    	<%= f.label "Name der Grube:", :class => "control-label" %>
 	    	<div class="controls">
-	      		<%= f.text_field :name, :class => "input-xlarge" %>
+	      		<%= f.text_field :name, {:class=>"input-small form-control"} %>
 	    	</div>
 	  	</div>
 
-	  	<div class="control-group">
+	  	<div class="from-group">
 	    	<%= f.label "Beschreibung:", :class => "control-label" %>
 	    	<div class="controls">
-	      		<%= text_area_tag :description, "", :class => "tinymce", :rows => 40, :cols => 70 %>
+	      		<%= text_area_tag :description, "", :class => "tinymce form-control", :rows => 40, :cols => 70 %>
 	    	</div>
 	  	</div>
 
-	  	<div class="control-group">
+	  	<div class="form-group">
 	    	<%= f.label "Besitzer:", :class => "control-label" %>
 	    	<div class="controls">
-	      		<%= f.text_field :owner, :class => "input-xlarge" %>
+	      		<%= f.text_field :owner, {:class=>"input-small form-control"} %>
 	    	</div>
 	  	</div>
 
-		<div class="actions">
+		<div class="form-group">
 	    	<%= f.submit "Speichern", :class=>"btn btn-primary" %>
 	  	</div>
 	  	

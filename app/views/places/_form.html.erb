@@ -13,31 +13,31 @@
     <% end %>
     <h4>Neuer Ort:</h4>
 	<%= form_for(@place) do |f| %>
-	  	<div class="control-group">
-	    	<%= f.label "Beschreibung:", :class => "control-label" %>
+	  	<div class="form-group">
+	    	<%= f.label "Beschreibung:", :class => "form-label" %>
 	    	<div class="controls">
-	      		<%= f.text_field :description,  :class => "input-xlarge" %>
+	      		<%= f.text_field :description,  :class => "input-xlarge form-control" %>
 	    	</div>
 	  	</div>
-	  	<div class="control-group">
-	    	<%= f.label "Link:", :class => "control-label" %>
+	  	<div class="form-group">
+	    	<%= f.label "Link:", :class => "form-label" %>
 	    	<div class="controls">
-	      		<%= f.text_field :link,  :class => "input-xlarge" %>
+	      		<%= f.text_field :link,  :class => "input-xlarge form-control" %>
 	    	</div>
 	  	</div>
-	  	<div class="control-group">
-	    	<%= f.label "Lat:", :class => "control-label" %>
+	  	<div class="form-group">
+	    	<%= f.label "Lat:", :class => "form-label" %>
 	    	<div class="controls">
-	      		<%= f.text_field :latitude,  :class => "input-xlarge", :placeholder=>"49.730194" %>
+	      		<%= f.text_field :latitude,  :class => "input-xlarge form-control", :placeholder=>"49.730194" %>
 	    	</div>
 	  	</div>
-	  	<div class="control-group">
-	    	<%= f.label "Long:", :class => "control-label" %>
+	  	<div class="form-group">
+	    	<%= f.label "Long:", :class => "form-label" %>
 	    	<div class="controls">
-	      		<%= f.text_field :longitude,  :class => "input-xlarge", :placeholder=>"6.762939" %>
+	      		<%= f.text_field :longitude,  :class => "input-xlarge form-control", :placeholder=>"6.762939" %>
 	    	</div>
 	  	</div>	  	
-		<div class="actions">
+		<div class="form-group">
 	    	<%= f.submit "Speichern", :class=>"btn btn-primary" %>
 	  	</div>					  	
 	<% end %>

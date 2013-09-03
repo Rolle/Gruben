@@ -14,26 +14,27 @@
     <% end %>
     <h4>Neue Grube / neuer Stollen:</h4>
 	<%= form_for(@image_artifact) do |f| %>
-	  	<div class="control-group">
-	    	<%= f.label "Grube:", :class => "control-label" %>
+	  	<div class="form-group">
+	    	<%= f.label "Grube:", :class => "form-label" %>
 	    	<div class="controls">
-	      		<%= f.select :adit_id, options_from_collection_for_select(@adits, "id", "name"), :class => "input-xlarge" %>
+	      		<%= f.select :adit_id, options_from_collection_for_select(@adits, "id", "name"), :class => "form-control col-lg-2 " %>
 	    	</div>
 	  	</div>
-	  	<div class="control-group">
-	    	<%= f.label "Beschreibung:", :class => "control-label" %>
+	  	<div class="form-group">
+	    	<%= f.label "Beschreibung:", :class => "form-label" %>
 	    	<div class="controls">
-	      		<%= f.text_area :description, :class => "tinymce", :rows => 40, :cols => 70 %>
+	      		<%= f.text_area :description, :class => "tinymce form-control", :rows => 40, :cols => 70 %>
 	    	</div>
 	  	</div>
-	  	<div class="control-group">
-	    	<%= f.label "Bilddatei:", :class => "control-label" %>
+	  	<div class="form-group">
+	    	<%= f.label "Bilddatei:", :class => "form-label" %>
 	    	<div class="controls">
-	      		<%= f.file_field :image, :class => "input-xlarge" %>
+	      		<%= f.file_field :image, :class => "col-lg-2 form-control" %>
 	    	</div>
 	  	</div>
 		<%= f.hidden_field :imgtype, { :value => 0 } %>
-		<div class="actions">
+
+		<div class="form-group">
 	    	<%= f.submit "Speichern", :class=>"btn btn-primary" %>
 	  	</div>					  	
 	<% end %>

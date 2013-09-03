@@ -1,8 +1,12 @@
-<div class="row-fluid span12">
-	<%= form_tag(adit_maps_path, :class => 'form-search') do |f| %>
-    	<%= label_tag "Grube:", nil, {:class => "control-label"} %>
-      <%= select_tag :adit_id, options_from_collection_for_select(@adits, "id", "name"), :class => "input-xlarge" %>
-      <%= submit_tag "Zeige"%>
+<div class="row">
+	<%= form_tag(adit_maps_path, :class => 'form-search well well-small') do |f| %>
+		<div class="form-group">
+    		<%= label_tag "Grube:", nil, {:class => "control-label"} %>
+      		<%= select_tag :adit_id, options_from_collection_for_select(@adits, "id", "name"), :class => "form-control input-xlarge" %>
+  		</div>
+  		<div class="form-group">
+      		<%= submit_tag "Zeige", :class=>"btn btn-primary"%>
+      	</div>
     <%end%>
 	<div id ="map" style="width:auto; height: 1000px;"></div>
 </div>
@@ -22,10 +26,15 @@
 	var osm = L.tileLayer.provider('OpenCycleMap4U');
 	var ggl = new L.Google();
 
-	var markers_adits = L.featureGroup();
-	var markers_main = L.featureGroup();
+	//var markers_adits = L.featureGroup();
+	//var markers_main = L.featureGroup();
+
+	var markers_adits = new L.MarkerClusterGroup();
+	var markers_main = new L.MarkerClusterGroup();
+
 	var marker_places = L.featureGroup();
 	var markers_flag = L.featureGroup();
+	
 
 	//var bing = new L.BingLayer("Anqm0F_JjIZvT0P3abS6KONpaBaKuTnITRrnYuiJCE0WOhH6ZbE4DzeT6brvKVR5");
 	var markers_to_id = new Array();

@@ -22,3 +22,4 @@
 //= require leaflet.awesome-markers.min
 //= require leaflet-providers
 //= require tinymce-jquery
+//= require leaflet.markercluster

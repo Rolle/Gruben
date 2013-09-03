@@ -45,7 +45,7 @@ module ApplicationHelper
       content << '<li><a href="/logout"><i class="icon-file"></i> Logout</a></li>'
     else
       content << '<li><a href="/login"><i class="icon-file"></i> Login</a></li>'
-    end
-    content_tag(:ul, content, {:class=>'nav'}, false)
+    end    
+    content_tag(:ul, content, {:class=>'nav navbar-nav'}, false)
   end
 end
