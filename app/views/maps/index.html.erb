@@ -25,6 +25,7 @@
 
 	var osm = L.tileLayer.provider('OpenCycleMap4U');
 	var ggl = new L.Google();
+	var bing = new L.BingLayer("ApiJPrwDWWqUlXoy7gg460DQBa55V-i1XqWWQfnf1sz5HW4CfxUkBZ7afjaMtQ5W");
 
 	//var markers_adits = L.featureGroup();
 	//var markers_main = L.featureGroup();
@@ -41,6 +42,8 @@
 	
 	//map.addLayer(osm);
 	map.addLayer(ggl);
+	map.addLayer(bing);
+
 	map.addLayer(markers_flag);
 	map.addLayer(markers_adits);
 	map.addLayer(markers_main);
@@ -48,7 +51,8 @@
 
 	var baseMaps = {
 		"OSM": osm,
-		"Satellit": ggl
+		"Google": ggl,
+		"Bing": bing
 	};
 
 	//icon for main adits

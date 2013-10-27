@@ -17,8 +17,8 @@
 //= require leaflet.label
 //= require Control.FullScreen
 //= require Google
+//= require Bing
 //= require jquery.fancybox
-//= require jquery.mousewheel-3.0.6.pack
 //= require leaflet.awesome-markers.min
 //= require leaflet-providers
 //= require tinymce-jquery
