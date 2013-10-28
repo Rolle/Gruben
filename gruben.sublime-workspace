@@ -312,10 +312,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/image_artifacts/index.html.erb",
+			"file": "app/views/maps/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 2251,
+				"buffer_size": 4245,
 				"line_ending": "Windows"
 			}
 		}
@@ -347,6 +347,8 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/ruby/Gruben/Gemfile",
+		"/C/Projects/ruby/Gruben/app/views/image_artifacts/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/layouts/application.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/adits/_form.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
@@ -355,7 +357,6 @@
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/new.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/user_sessions/_form.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/user_sessions/new.html.erb",
-		"/C/Projects/ruby/Gruben/app/views/image_artifacts/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/places/_form.html.erb",
 		"/C/Projects/ruby/Gruben/app/helpers/application_helper.rb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/leaflet.css",
@@ -374,7 +375,6 @@
 		"/C/Projects/ruby/Gruben/app/views/places/new.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/places/create.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/places/edit.html.erb",
-		"/C/Projects/ruby/Gruben/Gemfile",
 		"/C/Projects/ruby/Gruben/app/assets/javascripts/leaflet-providers.js",
 		"/C/Projects/ruby/Gruben.old/app/assets/javascripts/leaflet-providers.js",
 		"/C/Projects/ruby/Gruben/app/assets/javascripts/leaflet.js",
@@ -636,19 +636,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/image_artifacts/index.html.erb",
+					"file": "app/views/maps/index.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2251,
+						"buffer_size": 4245,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1358,
-								1358
+								1630,
+								1630
 							]
 						],
 						"settings":
@@ -657,7 +657,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 252.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
