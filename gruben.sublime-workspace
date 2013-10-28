@@ -315,7 +315,7 @@
 			"file": "app/views/maps/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 4245,
+				"buffer_size": 4225,
 				"line_ending": "Windows"
 			}
 		}
@@ -347,11 +347,13 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/ruby/Gruben/app/assets/stylesheets/bootstrap.min.css",
+		"/C/Projects/ruby/Gruben/app/assets/stylesheets/leaflet.awesome-markers.css",
+		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
 		"/C/Projects/ruby/Gruben/Gemfile",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/layouts/application.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/adits/_form.html.erb",
-		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/edit.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/notes/_form.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/new.html.erb",
@@ -472,9 +474,7 @@
 		"/C/Projects/ruby/GrubenMap/app/controllers/maps_controller.rb",
 		"/C/Projects/ruby/GrubenMap/app/views/adit/new.html.erb",
 		"/C/Projects/ruby/GrubenMap/app/controllers/adit_controller.rb",
-		"/C/Projects/ruby/GrubenMap/app/views/adit/create.html.erb",
-		"/C/Projects/ruby/GrubenMap/app/views/adit/show.html.erb",
-		"/C/Projects/ruby/GrubenMap/app/views/map/index.html.erb"
+		"/C/Projects/ruby/GrubenMap/app/views/adit/create.html.erb"
 	],
 	"find":
 	{
@@ -482,9 +482,11 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
+			"C:\\Projects\\ruby\\Gruben\\app\\assets",
+			"C:\\Projects\\ruby\\BigSwiftBrother\\app\\assets",
 			"C:\\Projects\\ruby\\BigSwiftBrother\\app\\views",
 			"C:\\Projects\\ruby\\BigSwiftBrother"
 		]
@@ -494,6 +496,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"glyphicons-halflings-regular.woff",
 			"images",
 			"drawnItems",
 			"markers_flag",
@@ -640,15 +643,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4245,
+						"buffer_size": 4225,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1630,
-								1630
+								1631,
+								1631
 							]
 						],
 						"settings":
@@ -657,7 +660,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 252.0,
+						"translation.y": 294.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
