@@ -315,7 +315,7 @@
 			"file": "app/views/maps/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 4225,
+				"buffer_size": 4321,
 				"line_ending": "Windows"
 			}
 		}
@@ -347,9 +347,13 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/ruby/Gruben/app/assets/stylesheets/glyphicons-halflings-regular.eot",
+		"/C/Projects/ruby/Gruben/config/environments/production.rb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/bootstrap.min.css",
-		"/C/Projects/ruby/Gruben/app/assets/stylesheets/leaflet.awesome-markers.css",
 		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
+		"/C/Projects/ruby/Gruben/app/views/user_sessions/new.html.erb",
+		"/C/Projects/ruby/Gruben/app/views/user_sessions/_form.html.erb",
+		"/C/Projects/ruby/Gruben/app/assets/stylesheets/leaflet.awesome-markers.css",
 		"/C/Projects/ruby/Gruben/Gemfile",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/layouts/application.html.erb",
@@ -357,8 +361,6 @@
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/edit.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/notes/_form.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/new.html.erb",
-		"/C/Projects/ruby/Gruben/app/views/user_sessions/_form.html.erb",
-		"/C/Projects/ruby/Gruben/app/views/user_sessions/new.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/places/_form.html.erb",
 		"/C/Projects/ruby/Gruben/app/helpers/application_helper.rb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/leaflet.css",
@@ -472,9 +474,7 @@
 		"/C/Projects/ruby/GrubenMap/app/helpers/map_helper.rb",
 		"/C/Projects/ruby/GrubenMap/app/helpers/adit_helper.rb",
 		"/C/Projects/ruby/GrubenMap/app/controllers/maps_controller.rb",
-		"/C/Projects/ruby/GrubenMap/app/views/adit/new.html.erb",
-		"/C/Projects/ruby/GrubenMap/app/controllers/adit_controller.rb",
-		"/C/Projects/ruby/GrubenMap/app/views/adit/create.html.erb"
+		"/C/Projects/ruby/GrubenMap/app/views/adit/new.html.erb"
 	],
 	"find":
 	{
@@ -496,6 +496,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"glyphicons-halflings-regular.svg",
 			"glyphicons-halflings-regular.woff",
 			"images",
 			"drawnItems",
@@ -643,15 +644,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4225,
+						"buffer_size": 4321,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1631,
-								1631
+								1711,
+								1711
 							]
 						],
 						"settings":
@@ -660,7 +661,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 294.0,
+						"translation.y": 630.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
