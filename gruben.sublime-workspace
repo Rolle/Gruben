@@ -312,10 +312,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/maps/index.html.erb",
+			"file": "/H/DB_Cleanup_2013/hostfiles_karin/2013/temp/make_uniq.rb",
 			"settings":
 			{
-				"buffer_size": 4321,
+				"buffer_size": 173,
 				"line_ending": "Windows"
 			}
 		}
@@ -347,10 +347,11 @@
 	},
 	"file_history":
 	[
+		"/H/DB_Cleanup_2013/hostfiles_karin/2013/make_uniq - Copy.rb",
+		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/glyphicons-halflings-regular.eot",
 		"/C/Projects/ruby/Gruben/config/environments/production.rb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/bootstrap.min.css",
-		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/user_sessions/new.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/user_sessions/_form.html.erb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/leaflet.awesome-markers.css",
@@ -473,8 +474,7 @@
 		"/C/Projects/ruby/GrubenMap/app/controllers/image_artifacts_controller_controller.rb",
 		"/C/Projects/ruby/GrubenMap/app/helpers/map_helper.rb",
 		"/C/Projects/ruby/GrubenMap/app/helpers/adit_helper.rb",
-		"/C/Projects/ruby/GrubenMap/app/controllers/maps_controller.rb",
-		"/C/Projects/ruby/GrubenMap/app/views/adit/new.html.erb"
+		"/C/Projects/ruby/GrubenMap/app/controllers/maps_controller.rb"
 	],
 	"find":
 	{
@@ -640,28 +640,27 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/maps/index.html.erb",
+					"file": "/H/DB_Cleanup_2013/hostfiles_karin/2013/temp/make_uniq.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4321,
+						"buffer_size": 173,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1711,
-								1711
+								173,
+								173
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 630.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
