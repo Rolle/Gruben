@@ -311,14 +311,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/H/DB_Cleanup_2013/hostfiles_karin/2013/temp/make_uniq.rb",
-			"settings":
-			{
-				"buffer_size": 173,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Packages/Ruby/Ruby.sublime-build",
 	"command_palette":
@@ -347,6 +339,7 @@
 	},
 	"file_history":
 	[
+		"/H/DB_Cleanup_2013/hostfiles_karin/2013/temp/make_uniq.rb",
 		"/H/DB_Cleanup_2013/hostfiles_karin/2013/make_uniq - Copy.rb",
 		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/glyphicons-halflings-regular.eot",
@@ -473,8 +466,7 @@
 		"/C/Projects/ruby/GrubenMap/config/routes.rb",
 		"/C/Projects/ruby/GrubenMap/app/controllers/image_artifacts_controller_controller.rb",
 		"/C/Projects/ruby/GrubenMap/app/helpers/map_helper.rb",
-		"/C/Projects/ruby/GrubenMap/app/helpers/adit_helper.rb",
-		"/C/Projects/ruby/GrubenMap/app/controllers/maps_controller.rb"
+		"/C/Projects/ruby/GrubenMap/app/helpers/adit_helper.rb"
 	],
 	"find":
 	{
@@ -635,36 +627,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/H/DB_Cleanup_2013/hostfiles_karin/2013/temp/make_uniq.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 173,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								173,
-								173
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
