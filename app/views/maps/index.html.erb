@@ -1,140 +1,140 @@
 <div class="row">
-	<%= form_tag(adit_maps_path, :class => 'form-search well well-small') do |f| %>
-		<div class="form-group">
-    		<%= label_tag "Grube:", nil, {:class => "control-label"} %>
-      		<%= select_tag :adit_id, options_from_collection_for_select(@adits, "id", "name"), :class => "form-control input-xlarge" %>
-  		</div>
-  		<div class="form-group">
-      		<%= submit_tag "Zeige", :class=>"btn btn-primary"%>
-      	</div>
+        <%= form_tag(adit_maps_path, :class => 'form-search well well-small') do |f| %>
+                <div class="form-group">
+                    <%= label_tag "Grube:", nil, {:class => "control-label"} %>
+                      <%= select_tag :adit_id, options_from_collection_for_select(@adits, "id", "name"), :class => "form-control input-xlarge" %>
+                  </div>
+                  <div class="form-group">
+                      <%= submit_tag "Zeige", :class=>"btn btn-primary"%>
+              </div>
     <%end%>
-	<div id ="map" style="width:auto; height: 1000px;"></div>
+        <div id ="map" style="width:auto; height: 1000px;"></div>
 </div>
 <script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
 <!--div style="width:1000px; height:640px" id ="map"></div-->
 <script type='text/javascript'>   
-	<% if Rails.env.production? %>
-		L.Icon.Default.imagePath = '/';
-	<% else %>
-		L.Icon.Default.imagePath = '<%= asset_path "" %>';
-	<% end %>
-	map = new L.Map('map');
- 	
-	var fullScreen = new L.Control.FullScreen(); 
-	map.addControl(fullScreen);
+        <% if Rails.env.production? %>
+                L.Icon.Default.imagePath = '/';
+        <% else %>
+                L.Icon.Default.imagePath = '<%= asset_path "" %>';
+        <% end %>
+        map = new L.Map('map');
+         
+        var fullScreen = new L.Control.FullScreen(); 
+        map.addControl(fullScreen);
 
-	var osm = L.tileLayer.provider('OpenCycleMap4U');
-	var ggl = new L.Google();
-	var bing = new L.BingLayer("ApiJPrwDWWqUlXoy7gg460DQBa55V-i1XqWWQfnf1sz5HW4CfxUkBZ7afjaMtQ5W");
+        var osm = L.tileLayer.provider('OpenCycleMap4U');
+        var ggl = new L.Google();
+        var bing = new L.BingLayer("ApiJPrwDWWqUlXoy7gg460DQBa55V-i1XqWWQfnf1sz5HW4CfxUkBZ7afjaMtQ5W");
 
-	//var markers_adits = L.featureGroup();
-	//var markers_main = L.featureGroup();
+        var markers_adits = L.featureGroup();
+        var markers_main = L.featureGroup();
 
-	var markers_adits = new L.MarkerClusterGroup();
-	var markers_main = new L.MarkerClusterGroup();
+        //var markers_adits = new L.MarkerClusterGroup();
+        //var markers_main = new L.MarkerClusterGroup();
 
-	/*var marker_places = L.featureGroup();
-	var markers_flag = L.featureGroup();*/
-	var marker_places = new L.MarkerClusterGroup();
-	var markers_flag = new L.MarkerClusterGroup();
-
-
-	//var bing = new L.BingLayer("Anqm0F_JjIZvT0P3abS6KONpaBaKuTnITRrnYuiJCE0WOhH6ZbE4DzeT6brvKVR5");
-	var markers_to_id = new Array();
-	
-	//map.addLayer(osm);
-	map.addLayer(bing);
-
-	map.addLayer(markers_flag);
-	map.addLayer(markers_adits);
-	map.addLayer(markers_main);
-	map.addLayer(marker_places);
-
-	var baseMaps = {
-		"OSM": osm,
-		"Google": ggl,
-		"Bing": bing
-	};
-
-	//icon for main adits
-	var redMarker = L.AwesomeMarkers.icon({
-  		icon: 'search', 
-  		markerColor: 'red',
-  		prefix: 'fa'
-	})
-	//icon for markers
-	var orangeMarker = L.AwesomeMarkers.icon({
-  		icon: 'question-sign', 
-  		markerColor: 'orange',
-  		prefix: 'fa'
-	})
-	//icon for adits
-	var blueMarker = L.AwesomeMarkers.icon({
-  		icon: 'home', 
-  		markerColor: 'blue',
-  		prefix: 'fa'
-	})
-	//icon for artifacts 
-	var purpleMarker = L.AwesomeMarkers.icon({
-  		icon: 'search', 
-  		prefix: 'fa',
-  		markerColor: 'purple'
-	})
-
-	
-	var overlayMaps = {
-	    "Gruben": markers_adits,
-	    "Mundlöcher": markers_main,
-	    "Sonstiges": markers_flag,	    
-	    "Orte": marker_places
-	};
-	L.control.layers(baseMaps, overlayMaps).addTo(map);
+        var marker_places = L.featureGroup();
+        var markers_flag = L.featureGroup();
+        //var marker_places = new L.MarkerClusterGroup();
+        //var markers_flag = new L.MarkerClusterGroup();
 
 
+        //var bing = new L.BingLayer("Anqm0F_JjIZvT0P3abS6KONpaBaKuTnITRrnYuiJCE0WOhH6ZbE4DzeT6brvKVR5");
+        var markers_to_id = new Array();
+        
+        //map.addLayer(osm);
+        map.addLayer(bing);
 
-	<% if @places %>
-		<% @places.each do |place| %>
-			marker = L.marker([<%= place.latitude %>, <%= place.longitude %>], {icon: redMarker});
-			var divNode = document.createElement("div");
-			divNode.innerHTML = '<%= place.link %>';
-			marker.bindPopup(divNode).openPopup();
-			marker.bindLabel('<%= place.description %>');
-			marker_places.addLayer(marker);
-		<% end %>
-	<% end %>
-	
-	<% if @images_adit %>
-		<% @images_adit.each do |img| %>
-			
-			<% if img.main %> //Grube!
-				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: blueMarker});
-				markers_main.addLayer(marker);	//Gruben
-				var divNode = document.createElement("div");
-				divNode.innerHTML = '<%= raw popup(img) %>';
-				marker.bindPopup(divNode).openPopup();
-				marker.bindLabel('<%= img.adit.name %>');
-				<% if img.primary %> //Primär
-					marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: orangeMarker});
-					markers_adits.addLayer(marker);
-					var divNode = document.createElement("div");
-					divNode.innerHTML = '<%= raw popup(img) %>';
-					marker.bindPopup(divNode).openPopup();
-					marker.bindLabel('<%= img.adit.name %>');
-				<% end %>			
-			<% else %>
-				marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: purpleMarker});
-				markers_flag.addLayer(marker);
-				var divNode = document.createElement("div");
-				divNode.innerHTML = '<%= raw popup(img) %>';
-				marker.bindPopup(divNode).openPopup();
-				marker.bindLabel('<%= img.adit.name %>');		
-			<% end %>
-		<% end %>
-	<% end %>
-	
-	<% if @images_adit.size > 1 %>
-		map.fitBounds(markers_main.getBounds());		
-	<% else %>
-		map.setView(new L.LatLng(<%= @images_adit[0].latitude%>,<%= @images_adit[0].longitude%>), 12);
-	<% end %>	
-</script>	
+        map.addLayer(markers_flag);
+        map.addLayer(markers_adits);
+        map.addLayer(markers_main);
+        map.addLayer(marker_places);
+
+        var baseMaps = {
+                "OSM": osm,
+                "Google": ggl,
+                "Bing": bing
+        };
+
+        //icon for main adits
+        var redMarker = L.AwesomeMarkers.icon({
+                  icon: 'search', 
+                  markerColor: 'red',
+                  prefix: 'fa'
+        })
+        //icon for markers
+        var orangeMarker = L.AwesomeMarkers.icon({
+                  icon: 'question-sign', 
+                  markerColor: 'orange',
+                  prefix: 'fa'
+        })
+        //icon for adits
+        var blueMarker = L.AwesomeMarkers.icon({
+                  icon: 'home', 
+                  markerColor: 'blue',
+                  prefix: 'fa'
+        })
+        //icon for artifacts 
+        var purpleMarker = L.AwesomeMarkers.icon({
+                  icon: 'search', 
+                  prefix: 'fa',
+                  markerColor: 'purple'
+        })
+
+        
+        var overlayMaps = {
+            "Gruben": markers_adits,
+            "Mundlöcher": markers_main,
+            "Sonstiges": markers_flag,            
+            "Orte": marker_places
+        };
+        L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+
+
+        <% if @places %>
+                <% @places.each do |place| %>
+                        marker = L.marker([<%= place.latitude %>, <%= place.longitude %>], {icon: redMarker});
+                        var divNode = document.createElement("div");
+                        divNode.innerHTML = '<%= place.link %>';
+                        marker.bindPopup(divNode).openPopup();
+                        marker.bindLabel('<%= place.description %>');
+                        marker_places.addLayer(marker);
+                <% end %>
+        <% end %>
+        
+        <% if @images_adit %>
+                <% @images_adit.each do |img| %>
+                        
+                        <% if img.main %> //Grube!
+                                marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: blueMarker});
+                                markers_main.addLayer(marker);        //Gruben
+                                var divNode = document.createElement("div");
+                                divNode.innerHTML = '<%= raw popup(img) %>';
+                                marker.bindPopup(divNode).openPopup();
+                                marker.bindLabel('<%= img.adit.name %>');
+                                <% if img.primary %> //Primär
+                                        marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: orangeMarker});
+                                        markers_adits.addLayer(marker);
+                                        var divNode = document.createElement("div");
+                                        divNode.innerHTML = '<%= raw popup(img) %>';
+                                        marker.bindPopup(divNode).openPopup();
+                                        marker.bindLabel('<%= img.adit.name %>');
+                                <% end %>                        
+                        <% else %>
+                                marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: purpleMarker});
+                                markers_flag.addLayer(marker);
+                                var divNode = document.createElement("div");
+                                divNode.innerHTML = '<%= raw popup(img) %>';
+                                marker.bindPopup(divNode).openPopup();
+                                marker.bindLabel('<%= img.adit.name %>');                
+                        <% end %>
+                <% end %>
+        <% end %>
+        
+        <% if @images_adit.size > 1 %>
+                map.fitBounds(markers_main.getBounds());                
+        <% else %>
+                map.setView(new L.LatLng(<%= @images_adit[0].latitude%>,<%= @images_adit[0].longitude%>), 12);
+        <% end %>        
+</script>    
