@@ -311,22 +311,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/assets/stylesheets/leaflet.css",
-			"settings":
-			{
-				"buffer_size": 9669,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Gemfile",
-			"settings":
-			{
-				"buffer_size": 1281,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Packages/Ruby/Ruby.sublime-build",
 	"command_palette":
@@ -355,16 +339,17 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
+		"/C/Projects/ruby/Gruben/app/assets/stylesheets/leaflet.css",
+		"/C/Projects/ruby/Gruben/Gemfile",
 		"/H/DB_Cleanup_2013/hostfiles_karin/2013/temp/make_uniq.rb",
 		"/H/DB_Cleanup_2013/hostfiles_karin/2013/make_uniq - Copy.rb",
-		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/glyphicons-halflings-regular.eot",
 		"/C/Projects/ruby/Gruben/config/environments/production.rb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/bootstrap.min.css",
 		"/C/Projects/ruby/Gruben/app/views/user_sessions/new.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/user_sessions/_form.html.erb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/leaflet.awesome-markers.css",
-		"/C/Projects/ruby/Gruben/Gemfile",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/layouts/application.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/adits/_form.html.erb",
@@ -373,7 +358,6 @@
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/new.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/places/_form.html.erb",
 		"/C/Projects/ruby/Gruben/app/helpers/application_helper.rb",
-		"/C/Projects/ruby/Gruben/app/assets/stylesheets/leaflet.css",
 		"/C/Projects/ruby/Gruben/app/assets/javascripts/application.js",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/application.css",
 		"/C/Projects/ruby/Gruben/config/routes.rb",
@@ -644,64 +628,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/assets/stylesheets/leaflet.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9669,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5540,
-								5540
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3919.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Gemfile",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1281,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								114,
-								114
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
