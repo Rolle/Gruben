@@ -311,6 +311,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/views/image_artifacts/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 2190,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "Packages/Ruby/Ruby.sublime-build",
 	"command_palette":
@@ -339,9 +347,9 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/ruby/Gruben/Gemfile",
 		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/leaflet.css",
-		"/C/Projects/ruby/Gruben/Gemfile",
 		"/H/DB_Cleanup_2013/hostfiles_karin/2013/temp/make_uniq.rb",
 		"/H/DB_Cleanup_2013/hostfiles_karin/2013/make_uniq - Copy.rb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/glyphicons-halflings-regular.eot",
@@ -628,8 +636,39 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/views/image_artifacts/index.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2190,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								937,
+								937
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -667,6 +706,10 @@
 	"output.exec":
 	{
 		"height": 357.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
 	},
 	"project": "gruben.sublime-project",
 	"replace":
@@ -721,7 +764,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 375.0,
+	"side_bar_width": 261.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

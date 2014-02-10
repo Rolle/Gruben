@@ -11,40 +11,37 @@
 	<%= link_to "WP-Download für Orux", download_image_artifacts_path %>
 </div>
 <div class="col-md-12">
-	<ul class="thumbnails">	
-		<% @images.each do |img| %>
-			<li class="col-sm-6 col-md-3">
-				<div class="thumbnail">
-
-					<a id="<%= img.id.to_s %>" class="fancybox" rel="popover" href="<%= img.image.url %>" class="thumbnail" data-placement="bottom" data-trigger="hover" data-content="<%= img.description %>">
-		      			<img  src="<%= img.image.url(:thumb) %>" data-src="<%= img.image.url(:thumb) %>" alt="" style="width: 260; height: 180px;">
-		    		</a>
-		    		<div class="caption">
-		    			<h4><%= img.adit.name %></h4>
-		    			<p><%= link_to "Bearbeiten", edit_image_artifact_path(img), :class=>"btn btn-primary btn-sm"%>
-		    			<%= link_to "Karte", image_artifact_map_path(img), :class=>"btn btn-primary btn-sm"%>
-		    			<%= link_to "Original", image_artifact_path(img), :class=>"btn btn-primary btn-sm"%></p>
-		    			
-		    			<%= check_box_tag( 'ck_main_'+img.id.to_s, img.id, img.main,					  
-						  :data => {
-						    :remote=> true, :url => url_for(action: :main, id: img.id), id: img.id
-						  }
-						)-%> Grube/Stollen
-						<%= check_box_tag( 'ck'+img.id.to_s, img.id, img.primary,					  
-						  :data => {
-						    :remote=> true, :url => url_for(action: :primary, id: img.id), id: img.id
-						  }
-						)-%> Primär
-						<%= check_box_tag( 'ck'+img.id.to_s, img.id, img.flag,					  
-						  :data => {
-						    :remote=> true, :url => url_for(action: :flag, id: img.id), id: img.id
-						  }
-						)-%> Mundloch
-		    		</div>	
-		    	</div>
-	    	</li>
-		<% end %>
-	</ul>
+	<% @images.each do |img| %>
+		<div class="col-xs-6 col-md-3">
+			<div class="thumbnail">
+				<a id="<%= img.id.to_s %>" class="fancybox" rel="popover" href="<%= img.image.url %>" class="thumbnail" data-placement="bottom" data-trigger="hover" data-content="<%= img.description %>">
+	      			<img  src="<%= img.image.url(:thumb) %>" data-src="<%= img.image.url(:thumb) %>" alt="" style="width: 244px; height: 200px;">
+	    		</a>
+	    		<div class="caption">
+	    			<h4><%= img.adit.name %></h4>
+	    			<p><%= link_to "Bearbeiten", edit_image_artifact_path(img), :class=>"btn btn-primary btn-sm"%>
+	    			<%= link_to "Karte", image_artifact_map_path(img), :class=>"btn btn-primary btn-sm"%>
+	    			<%= link_to "Original", image_artifact_path(img), :class=>"btn btn-primary btn-sm"%></p>
+	    			
+	    			<%= check_box_tag( 'ck_main_'+img.id.to_s, img.id, img.main,					  
+					  :data => {
+					    :remote=> true, :url => url_for(action: :main, id: img.id), id: img.id
+					  }
+					)-%> Grube/Stollen
+					<%= check_box_tag( 'ck'+img.id.to_s, img.id, img.primary,					  
+					  :data => {
+					    :remote=> true, :url => url_for(action: :primary, id: img.id), id: img.id
+					  }
+					)-%> Primär
+					<%= check_box_tag( 'ck'+img.id.to_s, img.id, img.flag,					  
+					  :data => {
+					    :remote=> true, :url => url_for(action: :flag, id: img.id), id: img.id
+					  }
+					)-%> Mundloch
+	    		</div>	
+	    	</div>
+    	</div>
+	<% end %>
 </div>
 <script type="text/javascript">
 	$(document).ready(function () {
