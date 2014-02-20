@@ -3,7 +3,7 @@ class MapsController < ApplicationController
 
   	def index
   		@page_id = "map_"
-  		@images_adit = ImageArtifact.where("imgtype = 0")
+  		@images_adit = ImageArtifact.where("imgtype = 0 and latitude not null and longitude not null")
   		@adits = Adit.with_images
       @places = Place.all
   		#@adits = Adit.find(:all, :order => "name")

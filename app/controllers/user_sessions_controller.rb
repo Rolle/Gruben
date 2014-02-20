@@ -5,7 +5,12 @@ class UserSessionsController < ApplicationController
     @page_id = "session_new"
     @user_session = UserSession.new
   end
- 
+
+  def show
+    @page_id = "session_new"
+    @user_session = UserSession.new
+  end
+
   def create
     @page_id = "session_create"
     @user_session = UserSession.new(params[:user_session])

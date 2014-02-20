@@ -1,29 +1,28 @@
 <%= form_for(@user_session) do |f| %>
-<div class="well well-small col-md-4">
-  <% if @user_session.errors.any? %>
-    <div class="alert  alert-danger">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <strong>Error</strong> 
-      Login failed!
+  <div class="well well-small col-md-4">
+    <% if @user_session.errors.any? %>
+      <div class="alert  alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Error</strong> 
+        Login failed!
+      </div>
+    <% end %>
+    <div class="form-group">              
+      <%= f.label "Username:", :class => "form-label"%>
+      <div class="controls">
+        <%= f.text_field :username, :class => "form-control input-large" %>
+      </div>
     </div>
-  <% end %>
-  <div class="form-group">              
-    <%= f.label "Username:", :class => "form-label"%>
-    <div class="controls">
-      <%= f.text_field :username, :class => "form-control input-large" %>
+    <div class="form-group">   
+      <%= f.label "Password:", :class => "form-label"%>
+      <div class="controls">
+        <%= f.password_field :password, :class => "form-control input-large" %>
+      </div>
     </div>
-  </div>
-  <div class="form-group">   
-    <%= f.label "Password:", :class => "form-label"%>
-    <div class="controls">
-      <%= f.password_field :password, :class => "form-control input-large" %>
+    <div class="form-group">   
+      <div class="controls">
+        <%= f.submit "Anmelden", :class=>"btn btn-primary" %>
+      </div>
     </div>
-  </div>
-  <div class="form-group">   
-    <div class="controls">
-      <%= f.submit "Anmelden", :class=>"btn btn-primary" %>
-    </div>
-  </div>
+  </div>    
 <% end %>
-
-</div>
