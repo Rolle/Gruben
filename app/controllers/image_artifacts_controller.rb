@@ -2,6 +2,14 @@ class ImageArtifactsController < ApplicationController
   before_filter :require_user
   respond_to :html, :js, :json
 
+  def destroy
+    @page_id = "image_"
+    @image = ImageArtifact.find(params[:id])
+    @image.destroy
+    respond_with @image
+    #render :nothing => true
+  end
+
   def download
     image_artifacts = ImageArtifact.all
     b = Builder::XmlMarkup.new

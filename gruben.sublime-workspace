@@ -312,26 +312,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/user_sessions/_form.html.erb",
+			"file": "app/assets/stylesheets/overwrite.css.erb",
 			"settings":
 			{
-				"buffer_size": 939,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/models/user_session.rb",
-			"settings":
-			{
-				"buffer_size": 168,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/user_sessions_controller.rb",
-			"settings":
-			{
-				"buffer_size": 727,
+				"buffer_size": 1741,
 				"line_ending": "Windows"
 			}
 		}
@@ -364,6 +348,10 @@
 	"file_history":
 	[
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/index.html.erb",
+		"/C/Projects/ruby/Gruben/app/controllers/image_artifacts_controller.rb",
+		"/C/Projects/ruby/Gruben/app/views/user_sessions/_form.html.erb",
+		"/C/Projects/ruby/Gruben/app/models/user_session.rb",
+		"/C/Projects/ruby/Gruben/app/controllers/user_sessions_controller.rb",
 		"/C/Projects/ruby/Gruben/app/models/image_artifact.rb",
 		"/C/Projects/ruby/Gruben/Gemfile",
 		"/C/Projects/ruby/Gruben/app/controllers/maps_controller.rb",
@@ -376,7 +364,6 @@
 		"/C/Projects/ruby/Gruben/config/environments/production.rb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/bootstrap.min.css",
 		"/C/Projects/ruby/Gruben/app/views/user_sessions/new.html.erb",
-		"/C/Projects/ruby/Gruben/app/views/user_sessions/_form.html.erb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/leaflet.awesome-markers.css",
 		"/C/Projects/ruby/Gruben/app/views/layouts/application.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/adits/_form.html.erb",
@@ -387,7 +374,6 @@
 		"/C/Projects/ruby/Gruben/app/assets/javascripts/application.js",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/application.css",
 		"/C/Projects/ruby/Gruben/config/routes.rb",
-		"/C/Projects/ruby/Gruben/app/controllers/image_artifacts_controller.rb",
 		"/C/Projects/ruby/Gruben/app/helpers/maps_helper.rb",
 		"/C/Projects/ruby/Gruben/db/migrate/20130726135505_remove_adit_from_image_artifacts.rb",
 		"/C/Projects/ruby/Gruben/app/controllers/places_controller.rb",
@@ -488,9 +474,7 @@
 		"/C/Projects/ruby/GrubenMap/app/helpers/image_artifacts_helper.rb",
 		"/C/Projects/ruby/TwitterBikePlanner/app/models/tour.rb",
 		"/C/Projects/ruby/TwitterBikePlanner/app/controllers/tracks_controller.rb",
-		"/C/Projects/ruby/GrubenMap/config/routes.rb",
-		"/C/Projects/ruby/GrubenMap/app/controllers/image_artifacts_controller_controller.rb",
-		"/C/Projects/ruby/GrubenMap/app/helpers/map_helper.rb"
+		"/C/Projects/ruby/GrubenMap/config/routes.rb"
 	],
 	"find":
 	{
@@ -652,46 +636,16 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/user_sessions/_form.html.erb",
-					"semi_transient": false,
+					"file": "app/assets/stylesheets/overwrite.css.erb",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 939,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								483,
-								483
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/models/user_session.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 168,
+						"buffer_size": 1741,
 						"regions":
 						{
 						},
@@ -704,39 +658,11 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/controllers/user_sessions_controller.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 727,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								266,
-								266
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
+						"translation.x": -0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
