@@ -8,7 +8,6 @@ Gruben::Application.routes.draw do
       get "flag"
       get "main"
       get "primary"
-      get "destroy"
     end
 
     collection do
