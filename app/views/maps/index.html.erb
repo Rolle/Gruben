@@ -104,12 +104,14 @@
         <% end %>
         
         <% if @images_adit %>
-                <% @images_adit.each do |img| %>
-                        
+                <% @images_adit.each do |img| %>                        
                         <% if img.main %> //Grube!
                                 marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: blueMarker});
                                 markers_main.addLayer(marker);        //Gruben
                                 var divNode = document.createElement("div");
+                                var node_id = document.createAttribute("id");
+                                node_id.nodeValue = "gallery-pic-"+<%= img.id %>;
+                                divNode.setAttributeNode(node_id);
                                 divNode.innerHTML = '<%= raw popup(img) %>';
                                 marker.bindPopup(divNode).openPopup();
                                 marker.bindLabel('<%= img.adit.name %>');
@@ -134,7 +136,8 @@
         
         <% if @images_adit.size > 1 %>
                 map.fitBounds(markers_main.getBounds());                
-        <% else %>
+        <% end %>
+        <% if @images_adit.size == 1 %>
                 map.setView(new L.LatLng(<%= @images_adit[0].latitude%>,<%= @images_adit[0].longitude%>), 12);
         <% end %>        
 </script>    
