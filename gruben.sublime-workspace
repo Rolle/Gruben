@@ -316,10 +316,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/image_artifacts_controller.rb",
+			"file": "app/views/maps/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 2617,
+				"buffer_size": 6243,
 				"line_ending": "Windows"
 			}
 		}
@@ -352,9 +352,9 @@
 	"file_history":
 	[
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/index.html.erb",
+		"/C/Projects/ruby/Gruben/app/controllers/image_artifacts_controller.rb",
 		"/C/Projects/ruby/Gruben/app/helpers/maps_helper.rb",
 		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
-		"/C/Projects/ruby/Gruben/app/controllers/image_artifacts_controller.rb",
 		"/C/Projects/ruby/Gruben/config/routes.rb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/edit.html.erb",
 		"/C/Projects/ruby/Gruben/Gemfile",
@@ -646,25 +646,25 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/image_artifacts_controller.rb",
+					"file": "app/views/maps/index.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2617,
+						"buffer_size": 6243,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								243,
-								243
+								1468,
+								1468
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,

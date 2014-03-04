@@ -1,17 +1,18 @@
 <div class="row">
         <%= form_tag(adit_maps_path, :class => 'form-horizontal') do |f| %>
-                <div class="form-group">
-                    <%= label_tag "Grube:", nil, {:class => "control-label col-sm-1"} %>
-                    <div class="col-sm-4">
-                        <%= select_tag :adit_id, options_from_collection_for_select(@adits, "id", "name"), :class => "col-sm-4 form-control input-xlarge" %>
-                    </div>
-                    <%= submit_tag "Zeige", :class=>"btn btn-primary col-sm-1"%>
+            <div class="form-group">
+                <%= label_tag "Grube:", nil, {:class => "control-label col-sm-1"} %>
+                <div class="col-sm-4">
+                    <%= select_tag :adit_id, options_from_collection_for_select(@adits, "id", "name"), :class => "col-sm-4 form-control input-xlarge" %>
                 </div>
+                <%= submit_tag "Zeige", :class=>"btn btn-primary col-sm-1"%>
+            </div>
         <%end%>
         <div id ="map" style="width:auto; height: 1000px;"></div>
 </div>
+
 <script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
-<!--div style="width:1000px; height:640px" id ="map"></div-->
+
 <script type='text/javascript'>   
         <% if Rails.env.production? %>
                 L.Icon.Default.imagePath = '/';
@@ -45,10 +46,10 @@
         //map.addLayer(osm);
         map.addLayer(bing);
 
-        map.addLayer(markers_flag);
+        //map.addLayer(markers_flag);
         map.addLayer(markers_adits);
         map.addLayer(markers_main);
-        map.addLayer(marker_places);
+        //map.addLayer(marker_places);
 
         var baseMaps = {
                 "OSM": osm,
