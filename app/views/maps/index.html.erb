@@ -24,15 +24,17 @@
         var fullScreen = new L.Control.FullScreen(); 
         map.addControl(fullScreen);
 
-        var osm = L.tileLayer.provider('OpenCycleMap4U');
+        //var osm = L.tileLayer.provider('OpenCycleMap4U');
+        var osmde = L.tileLayer.provider('OpenStreetMap.DE');
         var ggl = new L.Google();
         var bing = new L.BingLayer("ApiJPrwDWWqUlXoy7gg460DQBa55V-i1XqWWQfnf1sz5HW4CfxUkBZ7afjaMtQ5W");
+        var esri = new L.tileLayer.provider('Esri.WorldTopoMap')
 
-        var markers_adits = L.featureGroup();
-        var markers_main = L.featureGroup();
+        //var markers_adits = L.featureGroup();
+        //var markers_main = L.featureGroup();
 
-        //var markers_adits = new L.MarkerClusterGroup();
-        //var markers_main = new L.MarkerClusterGroup();
+        var markers_adits = new L.MarkerClusterGroup();
+        var markers_main = new L.MarkerClusterGroup();
 
         var marker_places = L.featureGroup();
         var markers_flag = L.featureGroup();
@@ -52,9 +54,11 @@
         //map.addLayer(marker_places);
 
         var baseMaps = {
-                "OSM": osm,
+                //"OSM": osm,
                 "Google": ggl,
-                "Bing": bing
+                "Bing": bing,
+                "OSM DE": osmde,
+                "Esri": esri
         };
 
         //icon for main adits
@@ -110,20 +114,16 @@
                                 marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: blueMarker});
                                 markers_main.addLayer(marker);        //Gruben
                                 var divNode = document.createElement("div");
-                                var node_id = document.createAttribute("id");
-                                node_id.nodeValue = "gallery-pic-"+<%= img.id %>;
-                                divNode.setAttributeNode(node_id);
-                                divNode.innerHTML = '<%= raw popup(img) %>';
+                                divNode.innerHTML = '<%= raw (render partial: "image_artifacts/thumb", :locals => {:img => img} ).delete("\n")%>'
                                 marker.bindPopup(divNode).openPopup();
                                 marker.bindLabel('<%= img.adit.name %>');
                                 <% if img.primary %> //Primär
                                         marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: orangeMarker});
                                         markers_adits.addLayer(marker);
-                                        var divNode = document.createElement("div");
-                                        divNode.innerHTML = '<%= raw popup(img) %>';
+                                        divNode.innerHTML = '<%= raw (render partial: "image_artifacts/thumb", :locals => {:img => img} ).delete("\n")%>'
                                         marker.bindPopup(divNode).openPopup();
                                         marker.bindLabel('<%= img.adit.name %>');
-                                <% end %>                        
+                                <% end %>
                         <% else %>
                                 marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: purpleMarker});
                                 markers_flag.addLayer(marker);
@@ -135,10 +135,14 @@
                 <% end %>
         <% end %>
         
-        <% if @images_adit.size > 1 %>
-                map.fitBounds(markers_main.getBounds());                
+        /*<% if @images_adit.size > 1 %>
+            map.fitBounds(markers_main.getBounds());                
         <% end %>
         <% if @images_adit.size == 1 %>
-                map.setView(new L.LatLng(<%= @images_adit[0].latitude%>,<%= @images_adit[0].longitude%>), 12);
-        <% end %>        
+            map.setView(new L.LatLng(<%= @images_adit[0].latitude%>,<%= @images_adit[0].longitude%>), 12);
+        <% end %>      
+        <% if @images_adit.size == 0 %>  
+            map.setView(new L.LatLng(49.77477900007886,6.80334, 12);
+        <% end %>      */
+        map.setView(new L.LatLng(49.77477900007886,6.80334), 12);
 </script>    

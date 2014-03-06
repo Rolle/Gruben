@@ -319,7 +319,15 @@
 			"file": "app/views/maps/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 6243,
+				"buffer_size": 6434,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/image_artifacts/_thumb.html.erb",
+			"settings":
+			{
+				"buffer_size": 1787,
 				"line_ending": "Windows"
 			}
 		}
@@ -351,10 +359,11 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/ruby/Gruben/app/views/image_artifacts/_thumb.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/index.html.erb",
+		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/controllers/image_artifacts_controller.rb",
 		"/C/Projects/ruby/Gruben/app/helpers/maps_helper.rb",
-		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
 		"/C/Projects/ruby/Gruben/config/routes.rb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/edit.html.erb",
 		"/C/Projects/ruby/Gruben/Gemfile",
@@ -477,8 +486,7 @@
 		"/C/Projects/ruby/GrubenMap/app/helpers/application_helper.rb",
 		"/C/Projects/ruby/GrubenMap/app/views/image_artifacts/new.html.erb",
 		"/C/Projects/ruby/GrubenMap/app/views/adits/new.html.erb",
-		"/C/Projects/ruby/GrubenMap/app/helpers/image_artifacts_helper.rb",
-		"/C/Projects/ruby/TwitterBikePlanner/app/models/tour.rb"
+		"/C/Projects/ruby/GrubenMap/app/helpers/image_artifacts_helper.rb"
 	],
 	"find":
 	{
@@ -650,15 +658,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6243,
+						"buffer_size": 6434,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1468,
-								1468
+								1541,
+								1541
 							]
 						],
 						"settings":
@@ -668,10 +676,39 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 168.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/image_artifacts/_thumb.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1787,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								502,
+								502
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
