@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"image_",
+				"images_adit"
+			],
+			[
 				"div",
 				"divNode"
 			],
@@ -46,10 +50,6 @@
 			[
 				"open",
 				"openPopup"
-			],
-			[
-				"image_",
-				"image_artifact"
 			],
 			[
 				"ke",
@@ -315,22 +315,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/views/maps/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 6434,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/image_artifacts/_thumb.html.erb",
-			"settings":
-			{
-				"buffer_size": 1787,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Packages/Ruby/Ruby.sublime-build",
 	"command_palette":
@@ -338,14 +322,23 @@
 		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			]
 		],
-		"width": 472.0
+		"width": 512.0
 	},
 	"console":
 	{
 		"height": 129.0,
 		"history":
 		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
 	"distraction_free":
@@ -359,9 +352,9 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/_thumb.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/index.html.erb",
-		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/controllers/image_artifacts_controller.rb",
 		"/C/Projects/ruby/Gruben/app/helpers/maps_helper.rb",
 		"/C/Projects/ruby/Gruben/config/routes.rb",
@@ -649,68 +642,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/views/maps/index.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6434,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1541,
-								1541
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 168.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/image_artifacts/_thumb.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1787,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								502,
-								502
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],

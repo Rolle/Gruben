@@ -11,9 +11,35 @@
         <div id ="map" style="width:auto; height: 1000px;"></div>
 </div>
 
+<% @images_adit.each do |img| %>
+    <div class="modal fade" id="modal-<%= img.id.to_s%>">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"><%= img.adit.name %></h4>
+              </div>
+              <div class="modal-body">
+                <p><%= raw (render partial: "image_artifacts/thumb", :locals => {:img => img} ).delete("\n")%></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+              </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+<% end %>
+
 <script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
 
 <script type='text/javascript'>   
+
+        function onMarkerClick(e) {
+            //console.log(this.options.win_url);
+            //alert(this.options.image_id);
+            $('#modal-' + this.options.image_id).modal();
+        }
+
         <% if Rails.env.production? %>
                 L.Icon.Default.imagePath = '/';
         <% else %>
@@ -111,8 +137,11 @@
         <% if @images_adit %>
                 <% @images_adit.each do |img| %>                        
                         <% if img.main %> //Grube!
-                                marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: blueMarker});
+                                marker = L.marker([<%= img.latitude %>, <%= img.longitude %>], {icon: blueMarker, image_id: <%=img.id %>});
                                 markers_main.addLayer(marker);        //Gruben
+                                //---- for modal dialog
+                                //marker.on('click', onMarkerClick);
+                                //------
                                 var divNode = document.createElement("div");
                                 divNode.innerHTML = '<%= raw (render partial: "image_artifacts/thumb", :locals => {:img => img} ).delete("\n")%>'
                                 marker.bindPopup(divNode).openPopup();
