@@ -3,7 +3,16 @@
 			<img  src="<%= img.image.url(:thumb) %>" data-src="<%= img.image.url(:thumb) %>" alt="" style="width: 244px; height: 200px;">
 	</a>
 	<div class="caption">
-		<h4><%= img.adit.name %></h4><h6><small>(<%= img.latitude.to_s + " / " + img.longitude.to_s %>)</small></h6>
+		<h4><%= img.adit.name %></h4><!--h6><small>(<%= img.latitude.to_s + " / " + img.longitude.to_s %>)</small></h6-->
+		<p>
+			<%= form_tag(url_for(controller: 'image_artifacts', action: :update_latlong, id: img.id), remote: true) do %>
+		    	<%= label_tag "Lat/Long:", nil, :class => "input-sm col-sm-3" %>
+				<%= text_field_tag :latitude, img.latitude, :class=>"input-sm col-sm-3" %><%= text_field_tag :longitude, img.longitude, :class=>"input-sm col-sm-3" %>
+				<%= button_tag( :class => "btn btn-primary btn-sm") do %>
+  					<i class="glyphicon glyphicon-save"></i>
+				<% end %>
+			<% end %>
+		</p>
 		<p>
 		<%= link_to('<i class="btn btn-primary btn-sm glyphicon glyphicon-edit"></i>'.html_safe, edit_image_artifact_path(img)) %>
 		<%= link_to('<i class="btn btn-primary btn-sm glyphicon glyphicon-globe"></i>'.html_safe, image_artifact_map_path(img))%>

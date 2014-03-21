@@ -315,6 +315,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 2079,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "Packages/Ruby/Ruby.sublime-build",
 	"command_palette":
@@ -352,6 +360,8 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/ruby/Gruben/Gemfile",
+		"/C/Projects/ruby/Gruben/app/helpers/application_helper.rb",
 		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/_thumb.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/index.html.erb",
@@ -359,7 +369,6 @@
 		"/C/Projects/ruby/Gruben/app/helpers/maps_helper.rb",
 		"/C/Projects/ruby/Gruben/config/routes.rb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/edit.html.erb",
-		"/C/Projects/ruby/Gruben/Gemfile",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/destroy.js.erb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/bootstrap.min.css",
 		"/C/Projects/ruby/Gruben/app/views/layouts/application.html.erb",
@@ -380,7 +389,6 @@
 		"/C/Projects/ruby/Gruben/app/views/adits/_form.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/notes/_form.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/places/_form.html.erb",
-		"/C/Projects/ruby/Gruben/app/helpers/application_helper.rb",
 		"/C/Projects/ruby/Gruben/app/assets/javascripts/application.js",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/application.css",
 		"/C/Projects/ruby/Gruben/db/migrate/20130726135505_remove_adit_from_image_artifacts.rb",
@@ -642,8 +650,39 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/views/layouts/application.html.erb",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2079,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1275,
+								1361
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -719,7 +758,7 @@
 		[
 			[
 				"",
-				"C:\\Projects\\ruby\\BigBrother\\bigbrother.sublime-project"
+				"C:\\Projects\\ruby\\BergwerkPage\\BergwerkPage\\BergwerkPage.sublime-project"
 			]
 		],
 		"width": 380.0

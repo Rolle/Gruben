@@ -4,7 +4,6 @@ class ImageArtifactsController < ApplicationController
 
   def destroy
     @page_id = "image_"
-    @image = ImageArtifact.find(params[:id])
     @image.destroy
     respond_with @image
   end
@@ -44,6 +43,13 @@ class ImageArtifactsController < ApplicationController
     @page_id = "image_"
     @image = ImageArtifact.find(params[:id])
     @image.update_attribute(:primary, !@image.primary)
+    render :nothing => true
+  end
+
+  def update_latlong
+    @image_artifact = ImageArtifact.find(params[:id])
+    @image = ImageArtifact.find(params[:id])
+    @image.update_attributes({:latitude => params[:latitude].to_f, :longitude => params[:longitude].to_f})
     render :nothing => true
   end
 
