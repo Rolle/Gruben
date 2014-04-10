@@ -3,7 +3,7 @@ class AditsController < ApplicationController
 
   def index
   	@page_id = "adit_index"
-    @adits = Adit.all(:order =>"name ASC")
+    @adits = Adit.all.order(name: :asc)
   end
 
   def create

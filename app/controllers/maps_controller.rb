@@ -13,14 +13,14 @@ class MapsController < ApplicationController
   		@page_id = "map_"
       id = params[:adit_id] || params[:id]
   		@images_adit = Adit.find(id).image_artifacts || Array.new
-  		@adits = Adit.find(:all, :order => "name")
+  		@adits = Adit.all.order(:name)
   		render "index"
   	end
 
     def image_artifact
       @page_id = "map_"
       @images_adit = ImageArtifact.where(:id => params[:id])      
-      @adits = Adit.find(:all, :order => "name")
+      @adits = Adit.all.order(:name)
       render "index"
     end
 end

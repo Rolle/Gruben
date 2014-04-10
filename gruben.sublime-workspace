@@ -316,10 +316,50 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/layouts/application.html.erb",
+			"file": "log/development.log",
 			"settings":
 			{
-				"buffer_size": 2079,
+				"buffer_size": 6685,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/user.rb",
+			"settings":
+			{
+				"buffer_size": 205,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/adits_controller.rb",
+			"settings":
+			{
+				"buffer_size": 958,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/image_artifacts_controller.rb",
+			"settings":
+			{
+				"buffer_size": 2799,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/bootstrap.min.css",
+			"settings":
+			{
+				"buffer_size": 99916,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/maps_controller.rb",
+			"settings":
+			{
+				"buffer_size": 706,
 				"line_ending": "Windows"
 			}
 		}
@@ -360,14 +400,16 @@
 	},
 	"file_history":
 	[
+		"/C/Projects/ruby/Gruben/app/controllers/user_sessions_controller.rb",
 		"/C/Projects/ruby/Gruben/Gemfile",
-		"/C/Projects/ruby/Gruben/app/helpers/application_helper.rb",
-		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/_thumb.html.erb",
-		"/C/Projects/ruby/Gruben/app/views/image_artifacts/index.html.erb",
-		"/C/Projects/ruby/Gruben/app/controllers/image_artifacts_controller.rb",
-		"/C/Projects/ruby/Gruben/app/helpers/maps_helper.rb",
 		"/C/Projects/ruby/Gruben/config/routes.rb",
+		"/C/Projects/ruby/Gruben/app/helpers/application_helper.rb",
+		"/C/Projects/ruby/Gruben/app/controllers/image_artifacts_controller.rb",
+		"/C/Projects/ruby/Gruben/config/application.rb",
+		"/C/Projects/ruby/Gruben/app/views/maps/index.html.erb",
+		"/C/Projects/ruby/Gruben/app/views/image_artifacts/index.html.erb",
+		"/C/Projects/ruby/Gruben/app/helpers/maps_helper.rb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/edit.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/destroy.js.erb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/bootstrap.min.css",
@@ -376,7 +418,6 @@
 		"/C/Projects/ruby/Gruben/app/views/image_artifacts/new.html.erb",
 		"/C/Projects/ruby/Gruben/app/views/user_sessions/_form.html.erb",
 		"/C/Projects/ruby/Gruben/app/models/user_session.rb",
-		"/C/Projects/ruby/Gruben/app/controllers/user_sessions_controller.rb",
 		"/C/Projects/ruby/Gruben/app/models/image_artifact.rb",
 		"/C/Projects/ruby/Gruben/app/controllers/maps_controller.rb",
 		"/C/Projects/ruby/Gruben/app/assets/stylesheets/leaflet.css",
@@ -486,8 +527,7 @@
 		"/C/Projects/ruby/GrubenMap/app/controllers/image_artifacts_controller.rb",
 		"/C/Projects/ruby/GrubenMap/app/helpers/application_helper.rb",
 		"/C/Projects/ruby/GrubenMap/app/views/image_artifacts/new.html.erb",
-		"/C/Projects/ruby/GrubenMap/app/views/adits/new.html.erb",
-		"/C/Projects/ruby/GrubenMap/app/helpers/image_artifacts_helper.rb"
+		"/C/Projects/ruby/GrubenMap/app/views/adits/new.html.erb"
 	],
 	"find":
 	{
@@ -650,37 +690,181 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/layouts/application.html.erb",
-					"semi_transient": true,
+					"file": "log/development.log",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2079,
+						"buffer_size": 6685,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1275,
-								1361
+								3573,
+								3573
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1346.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/models/user.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								200,
+								200
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/controllers/adits_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 958,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								154,
+								154
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 270.0,
+						"translation.y": 210.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/image_artifacts_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2799,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								917,
+								917
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 277.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/assets/stylesheets/bootstrap.min.css",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 99916,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								99916,
+								99916
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 697294.0,
+						"translation.y": -0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/controllers/maps_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 706,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								671,
+								671
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -688,7 +872,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 22.0
 	},
 	"input":
 	{
@@ -728,7 +912,7 @@
 	"project": "gruben.sublime-project",
 	"replace":
 	{
-		"height": 63.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -758,7 +942,7 @@
 		[
 			[
 				"",
-				"C:\\Projects\\ruby\\BergwerkPage\\BergwerkPage\\BergwerkPage.sublime-project"
+				"C:\\Projects\\ruby\\Ergo\\Ergo.sublime-project"
 			]
 		],
 		"width": 380.0

@@ -36,7 +36,7 @@ class ImageArtifactsController < ApplicationController
   def new
   	@page_id = "image_upload"
   	@image_artifact = ImageArtifact.new
-    @adits = Adit.find(:all, :order => "name ASC")
+    @adits = Adit.all.order(name: :asc)
   end
 
   def primary
@@ -84,7 +84,7 @@ class ImageArtifactsController < ApplicationController
 
   def index
   	@page_id = "image_index"
-    @images = ImageArtifact.find(:all, :order => "created_at")
+    @images = ImageArtifact.all.order(:created_at)
     @adits = Adit.with_images
   end
 
@@ -96,7 +96,7 @@ class ImageArtifactsController < ApplicationController
   def edit
     @page_id = "image_edit"
     @image = ImageArtifact.find(params[:id])
-    @adits = Adit.find(:all, :order => 'name')
+    @adits = Adit.all.order(:name)
   end
 
   def update
