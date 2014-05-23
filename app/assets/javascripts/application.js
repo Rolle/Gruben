@@ -23,3 +23,5 @@
 //= require leaflet-providers
 //= require tinymce-jquery
 //= require leaflet.markercluster
+//= require leaflet.draw
+//= require leaflet.measurecontrol

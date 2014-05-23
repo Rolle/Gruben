@@ -351,7 +351,7 @@
 			"file": "app/views/maps/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 7677,
+				"buffer_size": 7679,
 				"line_ending": "Unix"
 			}
 		},
@@ -815,15 +815,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7677,
+						"buffer_size": 7679,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2594,
-								2594
+								3149,
+								3149
 							]
 						],
 						"settings":
@@ -833,7 +833,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 663.0,
+						"translation.y": 974.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

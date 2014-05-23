@@ -8,7 +8,13 @@
                 <%= submit_tag "Zeige", :class=>"btn btn-primary col-sm-1"%>
             </div>
         <%end%>
-        <div id ="map" style="width:auto; height: 1000px;"></div>
+        <div id ="map" style="width:auto; height: 700px;"></div>        
+        <p>
+                Gruben: <%= @adits_count.to_s() -%> / 
+                Mundlöcher: <%= @main_count.to_s -%> / 
+                Orte: <%= @places_count.to_s -%> / 
+                Sonstiges: <%= @flag_count.size().to_s %> 
+        </p>
 </div>
 
 <% @images_adit.each do |img| %>
@@ -46,9 +52,14 @@
                 L.Icon.Default.imagePath = '<%= asset_path "" %>';
         <% end %>
         map = new L.Map('map');
-         
+         //map = new L.Map('map');
         var fullScreen = new L.Control.FullScreen(); 
         map.addControl(fullScreen);
+
+        L.Control.measureControl().addTo(map);
+
+        //var d = new L.Control.Distance(); map.addControl(d);
+        map.addControl(new L.Control.Scale());
 
         //var osm = L.tileLayer.provider('OpenCycleMap4U');
         var osmde = L.tileLayer.provider('OpenStreetMap.DE');
@@ -58,13 +69,12 @@
 
         var markers_adits = L.featureGroup();
         //var markers_main = L.featureGroup();
-
         //var markers_adits = new L.MarkerClusterGroup();
         var markers_main = new L.MarkerClusterGroup();
 
-        var marker_places = L.featureGroup();
+        var markers_places = L.featureGroup();
         var markers_flag = L.featureGroup();
-        //var marker_places = new L.MarkerClusterGroup();
+        //var markers_places = new L.MarkerClusterGroup();
         //var markers_flag = new L.MarkerClusterGroup();
 
 
@@ -77,7 +87,7 @@
         //map.addLayer(markers_flag);
         map.addLayer(markers_adits);
         //map.addLayer(markers_main);
-        //map.addLayer(marker_places);
+        //map.addLayer(markers_places);
 
         var baseMaps = {
                 //"OSM": osm,
@@ -117,11 +127,10 @@
             "Gruben": markers_adits,
             "Mundlöcher": markers_main,
             "Sonstiges": markers_flag,            
-            "Orte": marker_places
+            "Orte": markers_places
         };
         L.control.layers(baseMaps, overlayMaps).addTo(map);
-
-
+        
 
         <% if @places %>
                 <% @places.each do |place| %>
@@ -130,7 +139,7 @@
                         divNode.innerHTML = '<%= place.link %>';
                         marker.bindPopup(divNode).openPopup();
                         marker.bindLabel('<%= place.description %>');
-                        marker_places.addLayer(marker);
+                        markers_places.addLayer(marker);
                 <% end %>
         <% end %>
         
