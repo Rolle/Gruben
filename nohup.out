@@ -16,3 +16,9 @@ Puma starting in single mode...
 * Environment: production
 * Listening on tcp://127.0.0.1:9999
 Use Ctrl-C to stop
+Puma starting in single mode...
+* Version 2.8.2 (ruby 2.1.1-p76), codename: Sir Edmund Percival Hillary
+* Min threads: 0, max threads: 16
+* Environment: production
+* Listening on tcp://127.0.0.1:9999
+Use Ctrl-C to stop
