@@ -351,15 +351,15 @@
 			"file": "app/views/maps/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 7679,
-				"line_ending": "Unix"
+				"buffer_size": 8129,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "app/controllers/maps_controller.rb",
 			"settings":
 			{
-				"buffer_size": 706,
+				"buffer_size": 1252,
 				"line_ending": "Windows"
 			}
 		}
@@ -815,15 +815,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7679,
+						"buffer_size": 8129,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3149,
-								3149
+								0,
+								0
 							]
 						],
 						"settings":
@@ -845,15 +845,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 706,
+						"buffer_size": 1252,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								671,
-								671
+								0,
+								0
 							]
 						],
 						"settings":
