@@ -22,3 +22,43 @@ Puma starting in single mode...
 * Environment: production
 * Listening on tcp://127.0.0.1:9999
 Use Ctrl-C to stop
+Puma starting in single mode...
+* Version 2.8.2 (ruby 2.1.1-p76), codename: Sir Edmund Percival Hillary
+* Min threads: 0, max threads: 16
+* Environment: production
+* Listening on tcp://127.0.0.1:9999
+Use Ctrl-C to stop
+Puma starting in single mode...
+* Version 2.8.2 (ruby 2.1.1-p76), codename: Sir Edmund Percival Hillary
+* Min threads: 0, max threads: 16
+* Environment: production
+* Listening on tcp://127.0.0.1:9999
+Use Ctrl-C to stop
+- Gracefully stopping, waiting for requests to finish
+- Goodbye!
+Puma starting in single mode...
+* Version 2.8.2 (ruby 2.1.1-p76), codename: Sir Edmund Percival Hillary
+* Min threads: 0, max threads: 16
+* Environment: production
+* Listening on tcp://127.0.0.1:9999
+Use Ctrl-C to stop
+convert: Premature end of JPEG file `/tmp/c0fc69a04cc4234f2494522d01ae693220140925-20134-ki069u.jpg' @ jpeg.c/EmitMessage/227.
+convert: Corrupt JPEG data: premature end of data segment `/tmp/c0fc69a04cc4234f2494522d01ae693220140925-20134-ki069u.jpg' @ jpeg.c/EmitMessage/227.
+Puma starting in single mode...
+* Version 2.9.2 (ruby 2.1.4-p265), codename: Team High Five
+* Min threads: 0, max threads: 16
+* Environment: production
+* Listening on tcp://127.0.0.1:9999
+Use Ctrl-C to stop
+Puma starting in single mode...
+* Version 2.9.2 (ruby 2.1.4-p265), codename: Team High Five
+* Min threads: 0, max threads: 16
+* Environment: production
+* Listening on tcp://127.0.0.1:9999
+Use Ctrl-C to stop
+Puma starting in single mode...
+* Version 2.9.2 (ruby 2.1.4-p265), codename: Team High Five
+* Min threads: 0, max threads: 16
+* Environment: production
+* Listening on tcp://127.0.0.1:9999
+Use Ctrl-C to stop
