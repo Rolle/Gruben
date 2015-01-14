@@ -17,34 +17,9 @@
         </p>
 </div>
 
-<% @images_adit.each do |img| %>
-    <div class="modal fade" id="modal-<%= img.id.to_s%>">
-        <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title"><%= img.adit.name %></h4>
-              </div>
-              <div class="modal-body">
-                <p><%= raw (render partial: "image_artifacts/thumb", :locals => {:img => img} ).delete("\n")%></p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
-              </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-<% end %>
-
 <script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
 
 <script type='text/javascript'>   
-
-        function onMarkerClick(e) {
-            //console.log(this.options.win_url);
-            //alert(this.options.image_id);
-            $('#modal-' + this.options.image_id).modal();
-        }
 
         <% if Rails.env.production? %>
                 L.Icon.Default.imagePath = '/';
@@ -52,45 +27,25 @@
                 L.Icon.Default.imagePath = '<%= asset_path "" %>';
         <% end %>
         map = new L.Map('map');
-         //map = new L.Map('map');
-        var fullScreen = new L.Control.FullScreen(); 
-        map.addControl(fullScreen);
 
         L.Control.measureControl().addTo(map);
 
-        //var d = new L.Control.Distance(); map.addControl(d);
-        map.addControl(new L.Control.Scale());
-
-        //var osm = L.tileLayer.provider('OpenCycleMap4U');
         var osmde = L.tileLayer.provider('OpenStreetMap.DE');
         var ggl = new L.Google();
         var bing = new L.BingLayer("ApiJPrwDWWqUlXoy7gg460DQBa55V-i1XqWWQfnf1sz5HW4CfxUkBZ7afjaMtQ5W");
         var esri = new L.tileLayer.provider('Esri.WorldTopoMap')
 
         var markers_adits = L.featureGroup();
-        //var markers_main = L.featureGroup();
-        //var markers_adits = new L.MarkerClusterGroup();
         var markers_main = new L.MarkerClusterGroup();
 
         var markers_places = L.featureGroup();
         var markers_flag = L.featureGroup();
-        //var markers_places = new L.MarkerClusterGroup();
-        //var markers_flag = new L.MarkerClusterGroup();
-
-
-        //var bing = new L.BingLayer("Anqm0F_JjIZvT0P3abS6KONpaBaKuTnITRrnYuiJCE0WOhH6ZbE4DzeT6brvKVR5");
         var markers_to_id = new Array();
         
-        //map.addLayer(osm);
         map.addLayer(bing);
-
-        //map.addLayer(markers_flag);
         map.addLayer(markers_adits);
-        //map.addLayer(markers_main);
-        //map.addLayer(markers_places);
 
         var baseMaps = {
-                //"OSM": osm,
                 "Google": ggl,
                 "Bing": bing,
                 "OSM DE": osmde,

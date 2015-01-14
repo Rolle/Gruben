@@ -17,14 +17,14 @@ ActiveRecord::Schema.define(version: 20130726135505) do
     t.string   "name"
     t.string   "description"
     t.string   "owner"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "image_artifacts", force: true do |t|
     t.integer  "adit_id"
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -43,15 +43,15 @@ ActiveRecord::Schema.define(version: 20130726135505) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "notes", force: true do |t|
     t.string   "titel"
     t.string   "notice"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "places", force: true do |t|
@@ -69,8 +69,8 @@ ActiveRecord::Schema.define(version: 20130726135505) do
     t.string   "crypted_password"
     t.string   "password_salt"
     t.string   "persistence_token"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

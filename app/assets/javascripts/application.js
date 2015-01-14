@@ -15,7 +15,6 @@
 //= require bootstrap.min
 //= require leaflet
 //= require leaflet.label
-//= require Control.FullScreen
 //= require Google
 //= require Bing
 //= require jquery.fancybox
