@@ -36,6 +36,7 @@ class ImageArtifactsController < ApplicationController
   def new
   	@page_id = "image_upload"
   	@image_artifact = ImageArtifact.new
+    @adit_na = Adit.find_by_name("N/A")
     @adits = Adit.all.order(name: :asc)
   end
 
